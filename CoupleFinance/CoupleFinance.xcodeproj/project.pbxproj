@@ -25,6 +25,13 @@
 		D1250C7513DC459700FCEF36 /* CoupleFinanceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D1250C7413DC459700FCEF36 /* CoupleFinanceTests.m */; };
 		D1250C8313DC464200FCEF36 /* CFUIApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = D1250C8213DC464200FCEF36 /* CFUIApplication.m */; };
 		D1250C8613DC465C00FCEF36 /* CFInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = D1250C8513DC465C00FCEF36 /* CFInjector.m */; };
+		D1250C8D13DC47EB00FCEF36 /* AppScope.m in Sources */ = {isa = PBXBuildFile; fileRef = D1250C8C13DC47EB00FCEF36 /* AppScope.m */; };
+		D1250C9313DC493B00FCEF36 /* MesFinancesController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1250C9113DC493B00FCEF36 /* MesFinancesController.m */; };
+		D1250C9413DC493B00FCEF36 /* MesFinancesController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1250C9213DC493B00FCEF36 /* MesFinancesController.xib */; };
+		D1250C9813DC494A00FCEF36 /* HistoriqueController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1250C9613DC494A00FCEF36 /* HistoriqueController.m */; };
+		D1250C9913DC494A00FCEF36 /* HistoriqueController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1250C9713DC494A00FCEF36 /* HistoriqueController.xib */; };
+		D1250C9C13DC4C4200FCEF36 /* finances.png in Resources */ = {isa = PBXBuildFile; fileRef = D1250C9B13DC4C4200FCEF36 /* finances.png */; };
+		D1250C9E13DC4C8700FCEF36 /* historique.png in Resources */ = {isa = PBXBuildFile; fileRef = D1250C9D13DC4C8700FCEF36 /* historique.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +67,16 @@
 		D1250C8213DC464200FCEF36 /* CFUIApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFUIApplication.m; sourceTree = "<group>"; };
 		D1250C8413DC465C00FCEF36 /* CFInjector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFInjector.h; sourceTree = "<group>"; };
 		D1250C8513DC465C00FCEF36 /* CFInjector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFInjector.m; sourceTree = "<group>"; };
+		D1250C8B13DC47EB00FCEF36 /* AppScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppScope.h; sourceTree = "<group>"; };
+		D1250C8C13DC47EB00FCEF36 /* AppScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppScope.m; sourceTree = "<group>"; };
+		D1250C9013DC493B00FCEF36 /* MesFinancesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MesFinancesController.h; sourceTree = "<group>"; };
+		D1250C9113DC493B00FCEF36 /* MesFinancesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MesFinancesController.m; sourceTree = "<group>"; };
+		D1250C9213DC493B00FCEF36 /* MesFinancesController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MesFinancesController.xib; sourceTree = "<group>"; };
+		D1250C9513DC494900FCEF36 /* HistoriqueController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoriqueController.h; sourceTree = "<group>"; };
+		D1250C9613DC494A00FCEF36 /* HistoriqueController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoriqueController.m; sourceTree = "<group>"; };
+		D1250C9713DC494A00FCEF36 /* HistoriqueController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoriqueController.xib; sourceTree = "<group>"; };
+		D1250C9B13DC4C4200FCEF36 /* finances.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = finances.png; path = images/finances.png; sourceTree = "<group>"; };
+		D1250C9D13DC4C8700FCEF36 /* historique.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = historique.png; path = images/historique.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +109,7 @@
 		D1250C3513DC459600FCEF36 = {
 			isa = PBXGroup;
 			children = (
+				D1250C9A13DC4C3200FCEF36 /* images */,
 				D1250C4C13DC459700FCEF36 /* CoupleFinance */,
 				D1250C6C13DC459700FCEF36 /* CoupleFinanceTests */,
 				D1250C4313DC459700FCEF36 /* Frameworks */,
@@ -164,6 +182,8 @@
 		D1250C7E13DC45A900FCEF36 /* main */ = {
 			isa = PBXGroup;
 			children = (
+				D1250C8B13DC47EB00FCEF36 /* AppScope.h */,
+				D1250C8C13DC47EB00FCEF36 /* AppScope.m */,
 				D1250C8113DC464200FCEF36 /* CFUIApplication.h */,
 				D1250C8213DC464200FCEF36 /* CFUIApplication.m */,
 				D1250C5513DC459700FCEF36 /* CFDelegate.h */,
@@ -178,6 +198,8 @@
 			isa = PBXGroup;
 			children = (
 				D1250C7E13DC45A900FCEF36 /* main */,
+				D1250C8E13DC490900FCEF36 /* Mes Finances */,
+				D1250C8F13DC491D00FCEF36 /* Historique */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -187,6 +209,35 @@
 			children = (
 			);
 			name = CoreData;
+			sourceTree = "<group>";
+		};
+		D1250C8E13DC490900FCEF36 /* Mes Finances */ = {
+			isa = PBXGroup;
+			children = (
+				D1250C9013DC493B00FCEF36 /* MesFinancesController.h */,
+				D1250C9113DC493B00FCEF36 /* MesFinancesController.m */,
+				D1250C9213DC493B00FCEF36 /* MesFinancesController.xib */,
+			);
+			name = "Mes Finances";
+			sourceTree = "<group>";
+		};
+		D1250C8F13DC491D00FCEF36 /* Historique */ = {
+			isa = PBXGroup;
+			children = (
+				D1250C9513DC494900FCEF36 /* HistoriqueController.h */,
+				D1250C9613DC494A00FCEF36 /* HistoriqueController.m */,
+				D1250C9713DC494A00FCEF36 /* HistoriqueController.xib */,
+			);
+			name = Historique;
+			sourceTree = "<group>";
+		};
+		D1250C9A13DC4C3200FCEF36 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				D1250C9D13DC4C8700FCEF36 /* historique.png */,
+				D1250C9B13DC4C4200FCEF36 /* finances.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +311,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1250C5113DC459700FCEF36 /* InfoPlist.strings in Resources */,
+				D1250C9413DC493B00FCEF36 /* MesFinancesController.xib in Resources */,
+				D1250C9913DC494A00FCEF36 /* HistoriqueController.xib in Resources */,
+				D1250C9C13DC4C4200FCEF36 /* finances.png in Resources */,
+				D1250C9E13DC4C8700FCEF36 /* historique.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +355,9 @@
 				D1250C5D13DC459700FCEF36 /* CoupleFinance.xcdatamodeld in Sources */,
 				D1250C8313DC464200FCEF36 /* CFUIApplication.m in Sources */,
 				D1250C8613DC465C00FCEF36 /* CFInjector.m in Sources */,
+				D1250C8D13DC47EB00FCEF36 /* AppScope.m in Sources */,
+				D1250C9313DC493B00FCEF36 /* MesFinancesController.m in Sources */,
+				D1250C9813DC494A00FCEF36 /* HistoriqueController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
