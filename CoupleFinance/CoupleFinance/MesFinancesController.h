@@ -7,7 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CFInjector.h"
+
+@class AddTransactionController;
 
 @interface MesFinancesController : UIViewController
+<UITableViewDataSource, UITabBarDelegate>{
+  @public
+  UITableView * tableView_;
+  
+  @private
+  NSArray * cellsHist_;
+  NSArray * cellsNew_;
+  AddTransactionControllerProvider addTransactionProvider_;
+}
+
+@property (nonatomic, retain) IBOutlet UITableView * tableView;
+
+- (id)initWithNibName:(NSString *)nibNameOrNil 
+               bundle:(NSBundle *)nibBundleOrNil
+addTransactionProvider:(AddTransactionControllerProvider) addTransactionControllerProvider;
 
 @end

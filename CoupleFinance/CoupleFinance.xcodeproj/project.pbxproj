@@ -35,6 +35,15 @@
 		D1250CA313DC4D5700FCEF36 /* MonCoupleController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1250CA113DC4D5700FCEF36 /* MonCoupleController.m */; };
 		D1250CA413DC4D5700FCEF36 /* MonCoupleController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1250CA213DC4D5700FCEF36 /* MonCoupleController.xib */; };
 		D1250CA613DC4DFF00FCEF36 /* couple.png in Resources */ = {isa = PBXBuildFile; fileRef = D1250CA513DC4DFF00FCEF36 /* couple.png */; };
+		D1250CAE13DC52A500FCEF36 /* NewTransactionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D1250CAD13DC52A500FCEF36 /* NewTransactionCell.m */; };
+		D1250CB013DC52B500FCEF36 /* NewTransactionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1250CAF13DC52B500FCEF36 /* NewTransactionCell.xib */; };
+		D1250CB213DC533500FCEF36 /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = D1250CB113DC533500FCEF36 /* add.png */; };
+		D1250CB613DC53F900FCEF36 /* UIView+XIBLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = D1250CB513DC53F900FCEF36 /* UIView+XIBLoading.m */; };
+		D1250CB813DC552800FCEF36 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1250CB713DC552800FCEF36 /* QuartzCore.framework */; };
+		D1250CBD13DC569500FCEF36 /* AddTransactionController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1250CBB13DC569500FCEF36 /* AddTransactionController.m */; };
+		D1250CBE13DC569500FCEF36 /* AddTransactionController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1250CBC13DC569500FCEF36 /* AddTransactionController.xib */; };
+		D1250CC513DC5EEB00FCEF36 /* DoneDown.png in Resources */ = {isa = PBXBuildFile; fileRef = D1250CC313DC5EEB00FCEF36 /* DoneDown.png */; };
+		D1250CC613DC5EEB00FCEF36 /* DoneUp.png in Resources */ = {isa = PBXBuildFile; fileRef = D1250CC413DC5EEB00FCEF36 /* DoneUp.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +93,18 @@
 		D1250CA113DC4D5700FCEF36 /* MonCoupleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonCoupleController.m; sourceTree = "<group>"; };
 		D1250CA213DC4D5700FCEF36 /* MonCoupleController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonCoupleController.xib; sourceTree = "<group>"; };
 		D1250CA513DC4DFF00FCEF36 /* couple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = couple.png; path = images/couple.png; sourceTree = "<group>"; };
+		D1250CAC13DC52A500FCEF36 /* NewTransactionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTransactionCell.h; sourceTree = "<group>"; };
+		D1250CAD13DC52A500FCEF36 /* NewTransactionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTransactionCell.m; sourceTree = "<group>"; };
+		D1250CAF13DC52B500FCEF36 /* NewTransactionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewTransactionCell.xib; sourceTree = "<group>"; };
+		D1250CB113DC533500FCEF36 /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = add.png; path = images/add.png; sourceTree = "<group>"; };
+		D1250CB413DC53F900FCEF36 /* UIView+XIBLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XIBLoading.h"; sourceTree = "<group>"; };
+		D1250CB513DC53F900FCEF36 /* UIView+XIBLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XIBLoading.m"; sourceTree = "<group>"; };
+		D1250CB713DC552800FCEF36 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D1250CBA13DC569500FCEF36 /* AddTransactionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTransactionController.h; sourceTree = "<group>"; };
+		D1250CBB13DC569500FCEF36 /* AddTransactionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTransactionController.m; sourceTree = "<group>"; };
+		D1250CBC13DC569500FCEF36 /* AddTransactionController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddTransactionController.xib; sourceTree = "<group>"; };
+		D1250CC313DC5EEB00FCEF36 /* DoneDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DoneDown.png; path = images/DoneDown.png; sourceTree = "<group>"; };
+		D1250CC413DC5EEB00FCEF36 /* DoneUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DoneUp.png; path = images/DoneUp.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1250CB813DC552800FCEF36 /* QuartzCore.framework in Frameworks */,
 				D1250C4513DC459700FCEF36 /* UIKit.framework in Frameworks */,
 				D1250C4713DC459700FCEF36 /* Foundation.framework in Frameworks */,
 				D1250C4913DC459700FCEF36 /* CoreGraphics.framework in Frameworks */,
@@ -116,6 +138,7 @@
 		D1250C3513DC459600FCEF36 = {
 			isa = PBXGroup;
 			children = (
+				D1250CB713DC552800FCEF36 /* QuartzCore.framework */,
 				D1250C9A13DC4C3200FCEF36 /* images */,
 				D1250C4C13DC459700FCEF36 /* CoupleFinance */,
 				D1250C6C13DC459700FCEF36 /* CoupleFinanceTests */,
@@ -205,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				D1250C7E13DC45A900FCEF36 /* main */,
+				D1250CB313DC53DF00FCEF36 /* Utilities */,
 				D1250C8E13DC490900FCEF36 /* Mes Finances */,
 				D1250C9F13DC4D4300FCEF36 /* Mon Couple */,
 				D1250C8F13DC491D00FCEF36 /* Historique */,
@@ -222,9 +246,11 @@
 		D1250C8E13DC490900FCEF36 /* Mes Finances */ = {
 			isa = PBXGroup;
 			children = (
+				D1250CAB13DC525500FCEF36 /* cells */,
 				D1250C9013DC493B00FCEF36 /* MesFinancesController.h */,
 				D1250C9113DC493B00FCEF36 /* MesFinancesController.m */,
 				D1250C9213DC493B00FCEF36 /* MesFinancesController.xib */,
+				D1250CB913DC564800FCEF36 /* Add Transaction */,
 			);
 			name = "Mes Finances";
 			sourceTree = "<group>";
@@ -242,6 +268,9 @@
 		D1250C9A13DC4C3200FCEF36 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				D1250CB113DC533500FCEF36 /* add.png */,
+				D1250CC313DC5EEB00FCEF36 /* DoneDown.png */,
+				D1250CC413DC5EEB00FCEF36 /* DoneUp.png */,
 				D1250C9D13DC4C8700FCEF36 /* historique.png */,
 				D1250CA513DC4DFF00FCEF36 /* couple.png */,
 				D1250C9B13DC4C4200FCEF36 /* finances.png */,
@@ -257,6 +286,35 @@
 				D1250CA213DC4D5700FCEF36 /* MonCoupleController.xib */,
 			);
 			name = "Mon Couple";
+			sourceTree = "<group>";
+		};
+		D1250CAB13DC525500FCEF36 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				D1250CAC13DC52A500FCEF36 /* NewTransactionCell.h */,
+				D1250CAD13DC52A500FCEF36 /* NewTransactionCell.m */,
+				D1250CAF13DC52B500FCEF36 /* NewTransactionCell.xib */,
+			);
+			name = cells;
+			sourceTree = "<group>";
+		};
+		D1250CB313DC53DF00FCEF36 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				D1250CB413DC53F900FCEF36 /* UIView+XIBLoading.h */,
+				D1250CB513DC53F900FCEF36 /* UIView+XIBLoading.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		D1250CB913DC564800FCEF36 /* Add Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				D1250CBA13DC569500FCEF36 /* AddTransactionController.h */,
+				D1250CBB13DC569500FCEF36 /* AddTransactionController.m */,
+				D1250CBC13DC569500FCEF36 /* AddTransactionController.xib */,
+			);
+			name = "Add Transaction";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,6 +394,11 @@
 				D1250C9E13DC4C8700FCEF36 /* historique.png in Resources */,
 				D1250CA413DC4D5700FCEF36 /* MonCoupleController.xib in Resources */,
 				D1250CA613DC4DFF00FCEF36 /* couple.png in Resources */,
+				D1250CB013DC52B500FCEF36 /* NewTransactionCell.xib in Resources */,
+				D1250CB213DC533500FCEF36 /* add.png in Resources */,
+				D1250CBE13DC569500FCEF36 /* AddTransactionController.xib in Resources */,
+				D1250CC513DC5EEB00FCEF36 /* DoneDown.png in Resources */,
+				D1250CC613DC5EEB00FCEF36 /* DoneUp.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +443,9 @@
 				D1250C9313DC493B00FCEF36 /* MesFinancesController.m in Sources */,
 				D1250C9813DC494A00FCEF36 /* HistoriqueController.m in Sources */,
 				D1250CA313DC4D5700FCEF36 /* MonCoupleController.m in Sources */,
+				D1250CAE13DC52A500FCEF36 /* NewTransactionCell.m in Sources */,
+				D1250CB613DC53F900FCEF36 /* UIView+XIBLoading.m in Sources */,
+				D1250CBD13DC569500FCEF36 /* AddTransactionController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

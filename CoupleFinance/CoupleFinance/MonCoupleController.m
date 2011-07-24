@@ -8,6 +8,11 @@
 
 #import "MonCoupleController.h"
 
+@interface MonCoupleController (PrivateMethods)
+- (void) addButtons;
+- (void) didClickOnAddPartner;
+@end
+
 @implementation MonCoupleController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -33,6 +38,15 @@
 {
   [super viewDidLoad];
   [self.navigationItem setTitle:@"Mon Couple"];
+  [self addButtons];
+}
+
+- (void) addButtons{
+  UIBarButtonItem * addPartnerButton = [[[UIBarButtonItem alloc] 
+                                        initWithBarButtonSystemItem:UIBarButtonSystemItemAdd 
+                                        target:self 
+                                         action:@selector(didClickOnAddPartner)] autorelease];
+  [self.navigationItem setRightBarButtonItem:addPartnerButton];
 }
 
 - (void)viewDidUnload
@@ -46,6 +60,11 @@
 {
   // Return YES for supported orientations
   return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+#pragma mark IBAction
+- (void) didClickOnAddPartner{
+  
 }
 
 @end

@@ -10,7 +10,9 @@
 #import "AppScope.h"
 #import "CFDelegate.h"
 #import "MesFinancesController.h"
+#import "MonCoupleController.h"
 #import "HistoriqueController.h"
+#import "AddTransactionController.h"
 
 @implementation CFInjector
 
@@ -117,9 +119,13 @@
 
 #pragma mark MesFinancesController
 +(MesFinancesController*)injectMesFinancesController:(AppScope *)appScope{
+  
+  AddTransactionControllerProvider addProvider = [CFInjector injectAddTransactionControllerProvider:appScope];
+  
   MesFinancesController * controller = [[[MesFinancesController alloc] 
                                          initWithNibName:@"MesFinancesController" 
-                                         bundle:nil] autorelease];
+                                         bundle:nil
+                                         addTransactionProvider:addProvider] autorelease];
   return controller;
 }
 
@@ -139,5 +145,16 @@
   return controller;  
 }
 
+#pragma mark AddTransactionController
++(AddTransactionControllerProvider)injectAddTransactionControllerProvider:(AppScope *)appScope{
+  AddTransactionControllerProvider provider = ^() {
+  	AddTransactionController *addController = 
+		[[[AddTransactionController alloc] initWithNibName:@"AddTransactionController"
+                                                bundle:nil] autorelease];
+    
+  	return addController;
+	};
+	return [[provider copy] autorelease];
+}
 
 @end
