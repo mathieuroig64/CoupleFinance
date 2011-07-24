@@ -58,16 +58,19 @@
 	NSMutableArray *tabControllers = [NSMutableArray array];
 	
   UIImage *imgFinances = [UIImage imageNamed:@"finances.png"];
+	UIImage *imgPartner = [UIImage imageNamed:@"couple.png"];
 	UIImage *imgHistorique = [UIImage imageNamed:@"historique.png"];
 	
 	
 	NSArray *images = [NSArray arrayWithObjects:
                      imgFinances, 
+                     imgPartner, 
                      imgHistorique, 
                      nil];
 	
 	NSArray *titles = [NSArray arrayWithObjects:
                      @"Mes Finances",
+                     @"Mon Couple",
                      @"Historique",
                      nil];
 	
@@ -83,7 +86,6 @@
 		UINavigationController *navcontroller = 
 		[[[UINavigationController alloc] initWithRootViewController:viewcontroller] 
 		 autorelease];
-    [navcontroller.navigationBar setBarStyle:UIBarStyleBlack];
 		viewcontroller.tabBarItem = theItem;
 		navcontroller.tabBarItem = theItem;
 		[tabControllers addObject:navcontroller];
@@ -98,12 +100,16 @@
 	
 	MesFinancesController * financeController = 
 	[CFInjector injectMesFinancesController:appScope];
+  
+	MonCoupleController * coupleController = 
+	[CFInjector injectMonCoupleController:appScope];
 	
 	HistoriqueController * historiqueController =
 	[CFInjector injectHistoriqueController:appScope];
 	
   NSArray *viewControllers = [NSArray arrayWithObjects:
                               financeController,
+                              coupleController,
                               historiqueController,
                               nil];
   return viewControllers;
@@ -112,16 +118,24 @@
 #pragma mark MesFinancesController
 +(MesFinancesController*)injectMesFinancesController:(AppScope *)appScope{
   MesFinancesController * controller = [[[MesFinancesController alloc] 
-                                        initWithNibName:@"MesFinancesController" 
+                                         initWithNibName:@"MesFinancesController" 
                                          bundle:nil] autorelease];
+  return controller;
+}
+
+#pragma mark MonCoupleController
++(MonCoupleController*)injectMonCoupleController:(AppScope *)appScope{
+  MonCoupleController * controller = [[[MonCoupleController alloc] 
+                                       initWithNibName:@"MonCoupleController" 
+                                       bundle:nil] autorelease];
   return controller;
 }
 
 #pragma mark HistoriqueController
 +(HistoriqueController*)injectHistoriqueController:(AppScope *)appScope{
   HistoriqueController * controller = [[[HistoriqueController alloc] 
-                                         initWithNibName:@"HistoriqueController" 
-                                         bundle:nil] autorelease];
+                                        initWithNibName:@"HistoriqueController" 
+                                        bundle:nil] autorelease];
   return controller;  
 }
 

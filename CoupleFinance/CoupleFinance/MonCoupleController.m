@@ -1,14 +1,14 @@
 //
-//  HistoriqueController.m
+//  MonCoupleController.m
 //  CoupleFinance
 //
 //  Created by Mathieu ROIG on 7/24/11.
 //  Copyright 2011 Apocope. All rights reserved.
 //
 
-#import "HistoriqueController.h"
+#import "MonCoupleController.h"
 
-@implementation HistoriqueController
+@implementation MonCoupleController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,7 +32,7 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  [self.navigationItem setTitle:@"Historique"];
+  [self.navigationItem setTitle:@"Mon Couple"];
 }
 
 - (void)viewDidUnload

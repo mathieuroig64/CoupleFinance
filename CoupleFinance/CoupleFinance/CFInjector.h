@@ -11,10 +11,12 @@
 @class AppScope;
 @class CFInjector;
 @class MesFinancesController;
+@class MonCoupleController;
 @class HistoriqueController;
 
 typedef UITabBarController* (^TabBarProvider)();
 typedef MesFinancesController *(^MesFinancesControllerProvider)();
+typedef MonCoupleController *(^MonCoupleControllerProvider)();
 typedef HistoriqueController* (^HistoriqueControllerProvider)();
 
 @interface CFInjector : NSObject
@@ -34,6 +36,9 @@ typedef HistoriqueController* (^HistoriqueControllerProvider)();
 
 #pragma mark MesFinancesController
 +(MesFinancesController*)injectMesFinancesController:(AppScope *)appScope;
+
+#pragma mark MonCoupleController
++(MonCoupleController*)injectMonCoupleController:(AppScope *)appScope;
 
 #pragma mark HistoriqueController
 +(HistoriqueController*)injectHistoriqueController:(AppScope *)appScope;

@@ -32,6 +32,9 @@
 		D1250C9913DC494A00FCEF36 /* HistoriqueController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1250C9713DC494A00FCEF36 /* HistoriqueController.xib */; };
 		D1250C9C13DC4C4200FCEF36 /* finances.png in Resources */ = {isa = PBXBuildFile; fileRef = D1250C9B13DC4C4200FCEF36 /* finances.png */; };
 		D1250C9E13DC4C8700FCEF36 /* historique.png in Resources */ = {isa = PBXBuildFile; fileRef = D1250C9D13DC4C8700FCEF36 /* historique.png */; };
+		D1250CA313DC4D5700FCEF36 /* MonCoupleController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1250CA113DC4D5700FCEF36 /* MonCoupleController.m */; };
+		D1250CA413DC4D5700FCEF36 /* MonCoupleController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1250CA213DC4D5700FCEF36 /* MonCoupleController.xib */; };
+		D1250CA613DC4DFF00FCEF36 /* couple.png in Resources */ = {isa = PBXBuildFile; fileRef = D1250CA513DC4DFF00FCEF36 /* couple.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +80,10 @@
 		D1250C9713DC494A00FCEF36 /* HistoriqueController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoriqueController.xib; sourceTree = "<group>"; };
 		D1250C9B13DC4C4200FCEF36 /* finances.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = finances.png; path = images/finances.png; sourceTree = "<group>"; };
 		D1250C9D13DC4C8700FCEF36 /* historique.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = historique.png; path = images/historique.png; sourceTree = "<group>"; };
+		D1250CA013DC4D5700FCEF36 /* MonCoupleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonCoupleController.h; sourceTree = "<group>"; };
+		D1250CA113DC4D5700FCEF36 /* MonCoupleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonCoupleController.m; sourceTree = "<group>"; };
+		D1250CA213DC4D5700FCEF36 /* MonCoupleController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonCoupleController.xib; sourceTree = "<group>"; };
+		D1250CA513DC4DFF00FCEF36 /* couple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = couple.png; path = images/couple.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +206,7 @@
 			children = (
 				D1250C7E13DC45A900FCEF36 /* main */,
 				D1250C8E13DC490900FCEF36 /* Mes Finances */,
+				D1250C9F13DC4D4300FCEF36 /* Mon Couple */,
 				D1250C8F13DC491D00FCEF36 /* Historique */,
 			);
 			name = Classes;
@@ -235,9 +243,20 @@
 			isa = PBXGroup;
 			children = (
 				D1250C9D13DC4C8700FCEF36 /* historique.png */,
+				D1250CA513DC4DFF00FCEF36 /* couple.png */,
 				D1250C9B13DC4C4200FCEF36 /* finances.png */,
 			);
 			name = images;
+			sourceTree = "<group>";
+		};
+		D1250C9F13DC4D4300FCEF36 /* Mon Couple */ = {
+			isa = PBXGroup;
+			children = (
+				D1250CA013DC4D5700FCEF36 /* MonCoupleController.h */,
+				D1250CA113DC4D5700FCEF36 /* MonCoupleController.m */,
+				D1250CA213DC4D5700FCEF36 /* MonCoupleController.xib */,
+			);
+			name = "Mon Couple";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,6 +334,8 @@
 				D1250C9913DC494A00FCEF36 /* HistoriqueController.xib in Resources */,
 				D1250C9C13DC4C4200FCEF36 /* finances.png in Resources */,
 				D1250C9E13DC4C8700FCEF36 /* historique.png in Resources */,
+				D1250CA413DC4D5700FCEF36 /* MonCoupleController.xib in Resources */,
+				D1250CA613DC4DFF00FCEF36 /* couple.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +379,7 @@
 				D1250C8D13DC47EB00FCEF36 /* AppScope.m in Sources */,
 				D1250C9313DC493B00FCEF36 /* MesFinancesController.m in Sources */,
 				D1250C9813DC494A00FCEF36 /* HistoriqueController.m in Sources */,
+				D1250CA313DC4D5700FCEF36 /* MonCoupleController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
