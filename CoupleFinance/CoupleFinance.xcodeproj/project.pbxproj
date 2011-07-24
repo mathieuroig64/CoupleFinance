@@ -1,0 +1,489 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D1250C4513DC459700FCEF36 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1250C4413DC459700FCEF36 /* UIKit.framework */; };
+		D1250C4713DC459700FCEF36 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1250C4613DC459700FCEF36 /* Foundation.framework */; };
+		D1250C4913DC459700FCEF36 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1250C4813DC459700FCEF36 /* CoreGraphics.framework */; };
+		D1250C4B13DC459700FCEF36 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1250C4A13DC459700FCEF36 /* CoreData.framework */; };
+		D1250C5113DC459700FCEF36 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D1250C4F13DC459700FCEF36 /* InfoPlist.strings */; };
+		D1250C5313DC459700FCEF36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D1250C5213DC459700FCEF36 /* main.m */; };
+		D1250C5713DC459700FCEF36 /* CFDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1250C5613DC459700FCEF36 /* CFDelegate.m */; };
+		D1250C5D13DC459700FCEF36 /* CoupleFinance.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D1250C5B13DC459700FCEF36 /* CoupleFinance.xcdatamodeld */; };
+		D1250C6513DC459700FCEF36 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1250C6413DC459700FCEF36 /* SenTestingKit.framework */; };
+		D1250C6613DC459700FCEF36 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1250C4413DC459700FCEF36 /* UIKit.framework */; };
+		D1250C6713DC459700FCEF36 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1250C4613DC459700FCEF36 /* Foundation.framework */; };
+		D1250C6813DC459700FCEF36 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1250C4813DC459700FCEF36 /* CoreGraphics.framework */; };
+		D1250C6913DC459700FCEF36 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1250C4A13DC459700FCEF36 /* CoreData.framework */; };
+		D1250C7113DC459700FCEF36 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D1250C6F13DC459700FCEF36 /* InfoPlist.strings */; };
+		D1250C7313DC459700FCEF36 /* CoupleFinanceTests.h in Resources */ = {isa = PBXBuildFile; fileRef = D1250C7213DC459700FCEF36 /* CoupleFinanceTests.h */; };
+		D1250C7513DC459700FCEF36 /* CoupleFinanceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D1250C7413DC459700FCEF36 /* CoupleFinanceTests.m */; };
+		D1250C8313DC464200FCEF36 /* CFUIApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = D1250C8213DC464200FCEF36 /* CFUIApplication.m */; };
+		D1250C8613DC465C00FCEF36 /* CFInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = D1250C8513DC465C00FCEF36 /* CFInjector.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D1250C6A13DC459700FCEF36 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1250C3713DC459600FCEF36 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1250C3F13DC459700FCEF36;
+			remoteInfo = CoupleFinance;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D1250C4013DC459700FCEF36 /* CoupleFinance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoupleFinance.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1250C4413DC459700FCEF36 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D1250C4613DC459700FCEF36 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D1250C4813DC459700FCEF36 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D1250C4A13DC459700FCEF36 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D1250C4E13DC459700FCEF36 /* CoupleFinance-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CoupleFinance-Info.plist"; sourceTree = "<group>"; };
+		D1250C5013DC459700FCEF36 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D1250C5213DC459700FCEF36 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D1250C5413DC459700FCEF36 /* CoupleFinance-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoupleFinance-Prefix.pch"; sourceTree = "<group>"; };
+		D1250C5513DC459700FCEF36 /* CFDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFDelegate.h; sourceTree = "<group>"; };
+		D1250C5613DC459700FCEF36 /* CFDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFDelegate.m; sourceTree = "<group>"; };
+		D1250C5C13DC459700FCEF36 /* CoupleFinance.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoupleFinance.xcdatamodel; sourceTree = "<group>"; };
+		D1250C6313DC459700FCEF36 /* CoupleFinanceTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoupleFinanceTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1250C6413DC459700FCEF36 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		D1250C6E13DC459700FCEF36 /* CoupleFinanceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CoupleFinanceTests-Info.plist"; sourceTree = "<group>"; };
+		D1250C7013DC459700FCEF36 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D1250C7213DC459700FCEF36 /* CoupleFinanceTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoupleFinanceTests.h; sourceTree = "<group>"; };
+		D1250C7413DC459700FCEF36 /* CoupleFinanceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoupleFinanceTests.m; sourceTree = "<group>"; };
+		D1250C8113DC464200FCEF36 /* CFUIApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFUIApplication.h; sourceTree = "<group>"; };
+		D1250C8213DC464200FCEF36 /* CFUIApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFUIApplication.m; sourceTree = "<group>"; };
+		D1250C8413DC465C00FCEF36 /* CFInjector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFInjector.h; sourceTree = "<group>"; };
+		D1250C8513DC465C00FCEF36 /* CFInjector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFInjector.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D1250C3D13DC459700FCEF36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1250C4513DC459700FCEF36 /* UIKit.framework in Frameworks */,
+				D1250C4713DC459700FCEF36 /* Foundation.framework in Frameworks */,
+				D1250C4913DC459700FCEF36 /* CoreGraphics.framework in Frameworks */,
+				D1250C4B13DC459700FCEF36 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1250C5F13DC459700FCEF36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1250C6513DC459700FCEF36 /* SenTestingKit.framework in Frameworks */,
+				D1250C6613DC459700FCEF36 /* UIKit.framework in Frameworks */,
+				D1250C6713DC459700FCEF36 /* Foundation.framework in Frameworks */,
+				D1250C6813DC459700FCEF36 /* CoreGraphics.framework in Frameworks */,
+				D1250C6913DC459700FCEF36 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D1250C3513DC459600FCEF36 = {
+			isa = PBXGroup;
+			children = (
+				D1250C4C13DC459700FCEF36 /* CoupleFinance */,
+				D1250C6C13DC459700FCEF36 /* CoupleFinanceTests */,
+				D1250C4313DC459700FCEF36 /* Frameworks */,
+				D1250C4113DC459700FCEF36 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D1250C4113DC459700FCEF36 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D1250C4013DC459700FCEF36 /* CoupleFinance.app */,
+				D1250C6313DC459700FCEF36 /* CoupleFinanceTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D1250C4313DC459700FCEF36 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1250C4413DC459700FCEF36 /* UIKit.framework */,
+				D1250C4613DC459700FCEF36 /* Foundation.framework */,
+				D1250C4813DC459700FCEF36 /* CoreGraphics.framework */,
+				D1250C4A13DC459700FCEF36 /* CoreData.framework */,
+				D1250C6413DC459700FCEF36 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D1250C4C13DC459700FCEF36 /* CoupleFinance */ = {
+			isa = PBXGroup;
+			children = (
+				D1250C8013DC45EC00FCEF36 /* CoreData */,
+				D1250C7F13DC45B400FCEF36 /* Classes */,
+				D1250C5B13DC459700FCEF36 /* CoupleFinance.xcdatamodeld */,
+				D1250C4D13DC459700FCEF36 /* Supporting Files */,
+			);
+			path = CoupleFinance;
+			sourceTree = "<group>";
+		};
+		D1250C4D13DC459700FCEF36 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D1250C4E13DC459700FCEF36 /* CoupleFinance-Info.plist */,
+				D1250C4F13DC459700FCEF36 /* InfoPlist.strings */,
+				D1250C5213DC459700FCEF36 /* main.m */,
+				D1250C5413DC459700FCEF36 /* CoupleFinance-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D1250C6C13DC459700FCEF36 /* CoupleFinanceTests */ = {
+			isa = PBXGroup;
+			children = (
+				D1250C7213DC459700FCEF36 /* CoupleFinanceTests.h */,
+				D1250C7413DC459700FCEF36 /* CoupleFinanceTests.m */,
+				D1250C6D13DC459700FCEF36 /* Supporting Files */,
+			);
+			path = CoupleFinanceTests;
+			sourceTree = "<group>";
+		};
+		D1250C6D13DC459700FCEF36 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D1250C6E13DC459700FCEF36 /* CoupleFinanceTests-Info.plist */,
+				D1250C6F13DC459700FCEF36 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D1250C7E13DC45A900FCEF36 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				D1250C8113DC464200FCEF36 /* CFUIApplication.h */,
+				D1250C8213DC464200FCEF36 /* CFUIApplication.m */,
+				D1250C5513DC459700FCEF36 /* CFDelegate.h */,
+				D1250C5613DC459700FCEF36 /* CFDelegate.m */,
+				D1250C8413DC465C00FCEF36 /* CFInjector.h */,
+				D1250C8513DC465C00FCEF36 /* CFInjector.m */,
+			);
+			name = main;
+			sourceTree = "<group>";
+		};
+		D1250C7F13DC45B400FCEF36 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D1250C7E13DC45A900FCEF36 /* main */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		D1250C8013DC45EC00FCEF36 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D1250C3F13DC459700FCEF36 /* CoupleFinance */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1250C7813DC459700FCEF36 /* Build configuration list for PBXNativeTarget "CoupleFinance" */;
+			buildPhases = (
+				D1250C3C13DC459700FCEF36 /* Sources */,
+				D1250C3D13DC459700FCEF36 /* Frameworks */,
+				D1250C3E13DC459700FCEF36 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoupleFinance;
+			productName = CoupleFinance;
+			productReference = D1250C4013DC459700FCEF36 /* CoupleFinance.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D1250C6213DC459700FCEF36 /* CoupleFinanceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1250C7B13DC459700FCEF36 /* Build configuration list for PBXNativeTarget "CoupleFinanceTests" */;
+			buildPhases = (
+				D1250C5E13DC459700FCEF36 /* Sources */,
+				D1250C5F13DC459700FCEF36 /* Frameworks */,
+				D1250C6013DC459700FCEF36 /* Resources */,
+				D1250C6113DC459700FCEF36 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D1250C6B13DC459700FCEF36 /* PBXTargetDependency */,
+			);
+			name = CoupleFinanceTests;
+			productName = CoupleFinanceTests;
+			productReference = D1250C6313DC459700FCEF36 /* CoupleFinanceTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D1250C3713DC459600FCEF36 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = Apocope;
+			};
+			buildConfigurationList = D1250C3A13DC459600FCEF36 /* Build configuration list for PBXProject "CoupleFinance" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D1250C3513DC459600FCEF36;
+			productRefGroup = D1250C4113DC459700FCEF36 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D1250C3F13DC459700FCEF36 /* CoupleFinance */,
+				D1250C6213DC459700FCEF36 /* CoupleFinanceTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D1250C3E13DC459700FCEF36 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1250C5113DC459700FCEF36 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1250C6013DC459700FCEF36 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1250C7113DC459700FCEF36 /* InfoPlist.strings in Resources */,
+				D1250C7313DC459700FCEF36 /* CoupleFinanceTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D1250C6113DC459700FCEF36 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D1250C3C13DC459700FCEF36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1250C5313DC459700FCEF36 /* main.m in Sources */,
+				D1250C5713DC459700FCEF36 /* CFDelegate.m in Sources */,
+				D1250C5D13DC459700FCEF36 /* CoupleFinance.xcdatamodeld in Sources */,
+				D1250C8313DC464200FCEF36 /* CFUIApplication.m in Sources */,
+				D1250C8613DC465C00FCEF36 /* CFInjector.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1250C5E13DC459700FCEF36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1250C7513DC459700FCEF36 /* CoupleFinanceTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D1250C6B13DC459700FCEF36 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1250C3F13DC459700FCEF36 /* CoupleFinance */;
+			targetProxy = D1250C6A13DC459700FCEF36 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D1250C4F13DC459700FCEF36 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D1250C5013DC459700FCEF36 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D1250C6F13DC459700FCEF36 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D1250C7013DC459700FCEF36 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D1250C7613DC459700FCEF36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D1250C7713DC459700FCEF36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D1250C7913DC459700FCEF36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CoupleFinance/CoupleFinance-Prefix.pch";
+				INFOPLIST_FILE = "CoupleFinance/CoupleFinance-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D1250C7A13DC459700FCEF36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CoupleFinance/CoupleFinance-Prefix.pch";
+				INFOPLIST_FILE = "CoupleFinance/CoupleFinance-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		D1250C7C13DC459700FCEF36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CoupleFinance.app/CoupleFinance";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CoupleFinance/CoupleFinance-Prefix.pch";
+				INFOPLIST_FILE = "CoupleFinanceTests/CoupleFinanceTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		D1250C7D13DC459700FCEF36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CoupleFinance.app/CoupleFinance";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CoupleFinance/CoupleFinance-Prefix.pch";
+				INFOPLIST_FILE = "CoupleFinanceTests/CoupleFinanceTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D1250C3A13DC459600FCEF36 /* Build configuration list for PBXProject "CoupleFinance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1250C7613DC459700FCEF36 /* Debug */,
+				D1250C7713DC459700FCEF36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1250C7813DC459700FCEF36 /* Build configuration list for PBXNativeTarget "CoupleFinance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1250C7913DC459700FCEF36 /* Debug */,
+				D1250C7A13DC459700FCEF36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D1250C7B13DC459700FCEF36 /* Build configuration list for PBXNativeTarget "CoupleFinanceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1250C7C13DC459700FCEF36 /* Debug */,
+				D1250C7D13DC459700FCEF36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D1250C5B13DC459700FCEF36 /* CoupleFinance.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D1250C5C13DC459700FCEF36 /* CoupleFinance.xcdatamodel */,
+			);
+			currentVersion = D1250C5C13DC459700FCEF36 /* CoupleFinance.xcdatamodel */;
+			path = CoupleFinance.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D1250C3713DC459600FCEF36 /* Project object */;
+}
