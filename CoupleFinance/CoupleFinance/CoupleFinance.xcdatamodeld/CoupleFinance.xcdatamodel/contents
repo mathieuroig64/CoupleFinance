@@ -3,8 +3,8 @@
     <entity name="Historique">
         <attribute name="debutPeriode" optional="YES" attributeType="Date"/>
         <attribute name="finPeriode" optional="YES" attributeType="Date"/>
-        <relationship name="relationship" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify"/>
-        <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Transaction"/>
+        <relationship name="personne" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Personne" inverseName="historique" inverseEntity="Personne"/>
+        <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Transaction" inverseName="historique" inverseEntity="Transaction"/>
     </entity>
     <entity name="Partenaire">
         <attribute name="nom" optional="YES" attributeType="String"/>
@@ -12,18 +12,19 @@
     </entity>
     <entity name="Personne">
         <attribute name="udid" optional="YES" attributeType="String"/>
-        <relationship name="historique" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Historique"/>
-        <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Transaction" inverseName="relationship" inverseEntity="Transaction"/>
+        <relationship name="historique" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Historique" inverseName="personne" inverseEntity="Historique"/>
+        <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Transaction" inverseName="personne" inverseEntity="Transaction"/>
     </entity>
     <entity name="Transaction">
         <attribute name="date" optional="YES" attributeType="Date"/>
         <attribute name="valeur" optional="YES" attributeType="Float" defaultValueString="0.0"/>
-        <relationship name="relationship" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Personne" inverseName="transactions" inverseEntity="Personne"/>
+        <relationship name="historique" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Historique" inverseName="transactions" inverseEntity="Historique"/>
+        <relationship name="personne" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Personne" inverseName="transactions" inverseEntity="Personne"/>
     </entity>
     <elements>
-        <element name="Personne" positionX="-10917" positionY="-3384" width="128" height="90"/>
-        <element name="Transaction" positionX="-10667" positionY="-3204" width="128" height="90"/>
         <element name="Historique" positionX="-10667" positionY="-3402" width="128" height="105"/>
         <element name="Partenaire" positionX="-10935" positionY="-3231" width="128" height="75"/>
+        <element name="Personne" positionX="-10917" positionY="-3384" width="128" height="90"/>
+        <element name="Transaction" positionX="-10665" positionY="-3222" width="128" height="105"/>
     </elements>
 </model>
