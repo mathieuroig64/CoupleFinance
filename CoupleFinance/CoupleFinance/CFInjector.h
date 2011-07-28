@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TypeDef.h"
 
 @class AppScope;
 @class CFInjector;
@@ -14,12 +15,6 @@
 @class MonCoupleController;
 @class HistoriqueController;
 @class AddTransactionController;
-
-typedef UITabBarController* (^TabBarProvider)();
-typedef MesFinancesController *(^MesFinancesControllerProvider)();
-typedef MonCoupleController *(^MonCoupleControllerProvider)();
-typedef HistoriqueController* (^HistoriqueControllerProvider)();
-typedef AddTransactionController* (^AddTransactionControllerProvider)();
 
 @interface CFInjector : NSObject
 

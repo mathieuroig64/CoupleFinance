@@ -22,9 +22,9 @@
         <relationship name="personne" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Personne" inverseName="transactions" inverseEntity="Personne"/>
     </entity>
     <elements>
-        <element name="Historique" positionX="-10667" positionY="-3402" width="128" height="105"/>
-        <element name="Partenaire" positionX="-10935" positionY="-3231" width="128" height="75"/>
-        <element name="Personne" positionX="-10917" positionY="-3384" width="128" height="90"/>
-        <element name="Transaction" positionX="-10665" positionY="-3222" width="128" height="105"/>
+        <element name="Historique" positionX="-15203" positionY="-2853" width="128" height="105"/>
+        <element name="Partenaire" positionX="-15498" positionY="-2664" width="128" height="75"/>
+        <element name="Personne" positionX="-15498" positionY="-2799" width="128" height="90"/>
+        <element name="Transaction" positionX="-15201" positionY="-2673" width="128" height="105"/>
     </elements>
 </model>

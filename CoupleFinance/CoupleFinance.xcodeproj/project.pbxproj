@@ -105,6 +105,7 @@
 		D1250CBC13DC569500FCEF36 /* AddTransactionController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddTransactionController.xib; sourceTree = "<group>"; };
 		D1250CC313DC5EEB00FCEF36 /* DoneDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DoneDown.png; path = images/DoneDown.png; sourceTree = "<group>"; };
 		D1250CC413DC5EEB00FCEF36 /* DoneUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DoneUp.png; path = images/DoneUp.png; sourceTree = "<group>"; };
+		D1E87F6F13E12F79002AAE71 /* TypeDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeDef.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +221,7 @@
 				D1250C5613DC459700FCEF36 /* CFDelegate.m */,
 				D1250C8413DC465C00FCEF36 /* CFInjector.h */,
 				D1250C8513DC465C00FCEF36 /* CFInjector.m */,
+				D1E87F6F13E12F79002AAE71 /* TypeDef.h */,
 			);
 			name = main;
 			sourceTree = "<group>";
@@ -607,6 +609,7 @@
 				D1250C7A13DC459700FCEF36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D1250C7B13DC459700FCEF36 /* Build configuration list for PBXNativeTarget "CoupleFinanceTests" */ = {
 			isa = XCConfigurationList;
@@ -615,6 +618,7 @@
 				D1250C7D13DC459700FCEF36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

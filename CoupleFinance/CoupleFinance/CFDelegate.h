@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TypeDef.h"
 
 @interface CFDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate>{
 @public
@@ -14,17 +15,15 @@
   
 @private
 	UITabBarController *tabBarController_;
-	UITabBarController* (^tabBarProvider_)();
+	TabBarProvider tabBarProvider_;
+  NSManagedObjectContext *context_;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 
-@property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
-@property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;
-@property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
-
 -(id)initWithWindow:(UIWindow*)mainWindow
-     tabBarProvider:(UITabBarController* (^)())tabBarProvider;
+     tabBarProvider:(TabBarProvider)tabBarProvider
+            context:(NSManagedObjectContext*)context;
 
 
 - (void)saveContext;
