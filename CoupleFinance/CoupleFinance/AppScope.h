@@ -13,8 +13,12 @@
 @interface AppScope : NSObject {
 	CFDelegate *appDelegate_;
 	UITabBarController *tabController_;
+	NSManagedObjectContext *context_;
 }
 
 @property(nonatomic,retain) CFDelegate *appDelegate;
 @property (nonatomic, retain) UITabBarController *tabController;
+@property (nonatomic, retain) NSManagedObjectContext *context;
+
+- (id)initWithContext:(NSManagedObjectContext *)context;
 @end

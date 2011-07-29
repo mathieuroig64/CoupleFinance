@@ -27,7 +27,8 @@
   
 	CFDelegate* appDelegate = 
 	[[CFDelegate alloc] initWithWindow:window 
-											tabBarProvider:tabBarProvider];
+											tabBarProvider:tabBarProvider
+                             context:appScope.context];
   
   [appScope setAppDelegate:appDelegate];
 	
@@ -37,7 +38,7 @@
 #pragma mark Appscope
 +(AppScope*)injectAppScope{
 	AppScope* appScope = 
-	[[[AppScope alloc] init] autorelease];
+	[[AppScope alloc] initWithContext:[CFInjector injectContext]];
 	return appScope;
 }
 
@@ -125,7 +126,8 @@
   MesFinancesController * controller = [[[MesFinancesController alloc] 
                                          initWithNibName:@"MesFinancesController" 
                                          bundle:nil
-                                         addTransactionProvider:addProvider] autorelease];
+                                         addTransactionProvider:addProvider
+                                         context:appScope.context] autorelease];
   return controller;
 }
 
@@ -156,5 +158,35 @@
 	};
 	return [[provider copy] autorelease];
 }
+
+#pragma mark -
+#pragma mark Core Data
++(NSManagedObjectContext*)injectContext {
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, 
+                                                       NSUserDomainMask, YES);
+	NSString *basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
+	NSString *strFilePath = 
+	[basePath stringByAppendingPathComponent:@"/CoupleFinanace.db"];
+	NSLog(@"%@",strFilePath);
+	NSManagedObjectModel * managedObjectModel = 
+	[NSManagedObjectModel mergedModelFromBundles:nil] ; 
+	NSError *error;
+	NSPersistentStoreCoordinator * persistentStoreCoordinator = 
+	[[[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:managedObjectModel] 
+	 autorelease];
+	if (![persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType
+                                                configuration:nil 
+                                                          URL:[NSURL fileURLWithPath:strFilePath]
+                                                      options:nil 
+                                                        error:&error]) {
+		NSLog(@"Unable to addPersistentStoreWithType");
+		exit(-1);
+	} 
+	NSManagedObjectContext *managedObjectContext = 
+	[[[NSManagedObjectContext alloc] init] autorelease];
+	[managedObjectContext setPersistentStoreCoordinator: persistentStoreCoordinator];
+	return managedObjectContext;
+}
+
 
 @end

@@ -26,7 +26,4 @@
             context:(NSManagedObjectContext*)context;
 
 
-- (void)saveContext;
-- (NSURL *)applicationDocumentsDirectory;
-
 @end

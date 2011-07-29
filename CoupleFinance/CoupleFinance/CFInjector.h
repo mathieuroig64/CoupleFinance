@@ -43,4 +43,9 @@
 #pragma mark AddTransactionController
 +(AddTransactionControllerProvider)injectAddTransactionControllerProvider:(AppScope *)appScope;
 
+
+#pragma mark -
+#pragma mark CoreData
++ (NSManagedObjectContext*)injectContext;
+
 @end
