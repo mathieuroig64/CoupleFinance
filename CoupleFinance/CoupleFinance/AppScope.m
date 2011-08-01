@@ -12,15 +12,20 @@
 @implementation AppScope
 @synthesize appDelegate = appDelegate_;
 @synthesize tabController = tabController_;
-<<<<<<< HEAD
-@synthesize database = database_;
-=======
+@synthesize context = context_;
 
->>>>>>> parent of e94a0bc... Personnne
+-(id)initWithContext:(NSManagedObjectContext*)context{
+  self = [super init];
+  if (self) {
+    context_ = [context retain];
+  }
+  return self;
+}
 
 -(void)dealloc{
 	[tabController_ release];
 	[appDelegate_ release];
+  [context_ release];
 	[super dealloc];
 }
 
