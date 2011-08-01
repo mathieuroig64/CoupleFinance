@@ -20,6 +20,9 @@
 +(CFInjector*)injectDelegate{	
 	AppScope* appScope = [CFInjector injectAppScope];
 	
+  //Init BDD
+  [CFInjector copyDatabaseIfNeeded];
+  
 	UIWindow* window = [[[UIWindow alloc] 
                        initWithFrame:CGRectMake(0, 0, 320, 480)] autorelease];
 	
@@ -27,8 +30,7 @@
   
 	CFDelegate* appDelegate = 
 	[[CFDelegate alloc] initWithWindow:window 
-											tabBarProvider:tabBarProvider
-                             context:appScope.context];
+											tabBarProvider:tabBarProvider];
   
   [appScope setAppDelegate:appDelegate];
 	
@@ -38,7 +40,7 @@
 #pragma mark Appscope
 +(AppScope*)injectAppScope{
 	AppScope* appScope = 
-	[[AppScope alloc] initWithContext:[CFInjector injectContext]];
+	[[AppScope alloc] init];
 	return appScope;
 }
 
@@ -126,8 +128,7 @@
   MesFinancesController * controller = [[[MesFinancesController alloc] 
                                          initWithNibName:@"MesFinancesController" 
                                          bundle:nil
-                                         addTransactionProvider:addProvider
-                                         context:appScope.context] autorelease];
+                                         addTransactionProvider:addProvider] autorelease];
   return controller;
 }
 
@@ -160,32 +161,28 @@
 }
 
 #pragma mark -
-#pragma mark Core Data
-+(NSManagedObjectContext*)injectContext {
-	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, 
-                                                       NSUserDomainMask, YES);
-	NSString *basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
-	NSString *strFilePath = 
-	[basePath stringByAppendingPathComponent:@"/CoupleFinanace.db"];
-	NSLog(@"%@",strFilePath);
-	NSManagedObjectModel * managedObjectModel = 
-	[NSManagedObjectModel mergedModelFromBundles:nil] ; 
+#pragma mark SQLite
++(NSString *) getDBPath {
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory , NSUserDomainMask, YES);
+	NSString *documentsDir = [paths objectAtIndex:0];
+	return [documentsDir stringByAppendingPathComponent:@"CoupleFinance.db"];
+}
+
++(void) copyDatabaseIfNeeded{
+	//Using NSFileManager we can perform many file system operations.
+	NSFileManager *fileManager = [NSFileManager defaultManager];
 	NSError *error;
-	NSPersistentStoreCoordinator * persistentStoreCoordinator = 
-	[[[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:managedObjectModel] 
-	 autorelease];
-	if (![persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType
-                                                configuration:nil 
-                                                          URL:[NSURL fileURLWithPath:strFilePath]
-                                                      options:nil 
-                                                        error:&error]) {
-		NSLog(@"Unable to addPersistentStoreWithType");
-		exit(-1);
-	} 
-	NSManagedObjectContext *managedObjectContext = 
-	[[[NSManagedObjectContext alloc] init] autorelease];
-	[managedObjectContext setPersistentStoreCoordinator: persistentStoreCoordinator];
-	return managedObjectContext;
+	NSString *dbPath = [self getDBPath];
+	BOOL success = [fileManager fileExistsAtPath:dbPath]; 
+	
+	if(!success) {
+		
+		NSString *defaultDBPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"CoupleFinance.db"];
+		success = [fileManager copyItemAtPath:defaultDBPath toPath:dbPath error:&error];
+		
+		if (!success) 
+			NSAssert1(0, @"Failed to create writable database file with message '%@'.", [error localizedDescription]);
+	}	
 }
 
 

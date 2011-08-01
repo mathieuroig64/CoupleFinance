@@ -15,7 +15,6 @@
 		D1250C5113DC459700FCEF36 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D1250C4F13DC459700FCEF36 /* InfoPlist.strings */; };
 		D1250C5313DC459700FCEF36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D1250C5213DC459700FCEF36 /* main.m */; };
 		D1250C5713DC459700FCEF36 /* CFDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1250C5613DC459700FCEF36 /* CFDelegate.m */; };
-		D1250C5D13DC459700FCEF36 /* CoupleFinance.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D1250C5B13DC459700FCEF36 /* CoupleFinance.xcdatamodeld */; };
 		D1250C6513DC459700FCEF36 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1250C6413DC459700FCEF36 /* SenTestingKit.framework */; };
 		D1250C6613DC459700FCEF36 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1250C4413DC459700FCEF36 /* UIKit.framework */; };
 		D1250C6713DC459700FCEF36 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1250C4613DC459700FCEF36 /* Foundation.framework */; };
@@ -45,6 +44,8 @@
 		D1250CBE13DC569500FCEF36 /* AddTransactionController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1250CBC13DC569500FCEF36 /* AddTransactionController.xib */; };
 		D1250CC513DC5EEB00FCEF36 /* DoneDown.png in Resources */ = {isa = PBXBuildFile; fileRef = D1250CC313DC5EEB00FCEF36 /* DoneDown.png */; };
 		D1250CC613DC5EEB00FCEF36 /* DoneUp.png in Resources */ = {isa = PBXBuildFile; fileRef = D1250CC413DC5EEB00FCEF36 /* DoneUp.png */; };
+		D1DE3F4A13E56B8200D27340 /* couplefinance.db in Resources */ = {isa = PBXBuildFile; fileRef = D1DE3F4913E56B8200D27340 /* couplefinance.db */; };
+		D1DE3F5013E5811E00D27340 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D1DE3F4F13E5811E00D27340 /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +72,6 @@
 		D1250C5413DC459700FCEF36 /* CoupleFinance-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoupleFinance-Prefix.pch"; sourceTree = "<group>"; };
 		D1250C5513DC459700FCEF36 /* CFDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFDelegate.h; sourceTree = "<group>"; };
 		D1250C5613DC459700FCEF36 /* CFDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFDelegate.m; sourceTree = "<group>"; };
-		D1250C5C13DC459700FCEF36 /* CoupleFinance.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoupleFinance.xcdatamodel; sourceTree = "<group>"; };
 		D1250C6313DC459700FCEF36 /* CoupleFinanceTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoupleFinanceTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1250C6413DC459700FCEF36 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		D1250C6E13DC459700FCEF36 /* CoupleFinanceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CoupleFinanceTests-Info.plist"; sourceTree = "<group>"; };
@@ -108,6 +108,8 @@
 		D1250CBC13DC569500FCEF36 /* AddTransactionController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddTransactionController.xib; sourceTree = "<group>"; };
 		D1250CC313DC5EEB00FCEF36 /* DoneDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DoneDown.png; path = images/DoneDown.png; sourceTree = "<group>"; };
 		D1250CC413DC5EEB00FCEF36 /* DoneUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DoneUp.png; path = images/DoneUp.png; sourceTree = "<group>"; };
+		D1DE3F4913E56B8200D27340 /* couplefinance.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = couplefinance.db; sourceTree = "<group>"; };
+		D1DE3F4F13E5811E00D27340 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		D1E87F6F13E12F79002AAE71 /* TypeDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeDef.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1DE3F5013E5811E00D27340 /* libsqlite3.dylib in Frameworks */,
 				D1250CB813DC552800FCEF36 /* QuartzCore.framework in Frameworks */,
 				D1250C4513DC459700FCEF36 /* UIKit.framework in Frameworks */,
 				D1250C4713DC459700FCEF36 /* Foundation.framework in Frameworks */,
@@ -151,11 +154,13 @@
 		D1250C3513DC459600FCEF36 = {
 			isa = PBXGroup;
 			children = (
+				D1DE3F4F13E5811E00D27340 /* libsqlite3.dylib */,
 				D1250CB713DC552800FCEF36 /* QuartzCore.framework */,
 				D1250C9A13DC4C3200FCEF36 /* images */,
 				D1250C4C13DC459700FCEF36 /* CoupleFinance */,
 				D1250C6C13DC459700FCEF36 /* CoupleFinanceTests */,
 				D1250C4313DC459700FCEF36 /* Frameworks */,
+				D1DE3F4813E56B6F00D27340 /* ressources */,
 				D1250C4113DC459700FCEF36 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -186,7 +191,6 @@
 			children = (
 				D1250C8013DC45EC00FCEF36 /* CoreData */,
 				D1250C7F13DC45B400FCEF36 /* Classes */,
-				D1250C5B13DC459700FCEF36 /* CoupleFinance.xcdatamodeld */,
 				D1250C4D13DC459700FCEF36 /* Supporting Files */,
 			);
 			path = CoupleFinance;
@@ -332,6 +336,14 @@
 			name = "Add Transaction";
 			sourceTree = "<group>";
 		};
+		D1DE3F4813E56B6F00D27340 /* ressources */ = {
+			isa = PBXGroup;
+			children = (
+				D1DE3F4913E56B8200D27340 /* couplefinance.db */,
+			);
+			name = ressources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -414,6 +426,7 @@
 				D1250CBE13DC569500FCEF36 /* AddTransactionController.xib in Resources */,
 				D1250CC513DC5EEB00FCEF36 /* DoneDown.png in Resources */,
 				D1250CC613DC5EEB00FCEF36 /* DoneUp.png in Resources */,
+				D1DE3F4A13E56B8200D27340 /* couplefinance.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,7 +464,6 @@
 			files = (
 				D1250C5313DC459700FCEF36 /* main.m in Sources */,
 				D1250C5713DC459700FCEF36 /* CFDelegate.m in Sources */,
-				D1250C5D13DC459700FCEF36 /* CoupleFinance.xcdatamodeld in Sources */,
 				D1250C8313DC464200FCEF36 /* CFUIApplication.m in Sources */,
 				D1250C8613DC465C00FCEF36 /* CFInjector.m in Sources */,
 				D1250C8D13DC47EB00FCEF36 /* AppScope.m in Sources */,
@@ -635,19 +647,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		D1250C5B13DC459700FCEF36 /* CoupleFinance.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				D1250C5C13DC459700FCEF36 /* CoupleFinance.xcdatamodel */,
-			);
-			currentVersion = D1250C5C13DC459700FCEF36 /* CoupleFinance.xcdatamodel */;
-			path = CoupleFinance.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = D1250C3713DC459600FCEF36 /* Project object */;
 }

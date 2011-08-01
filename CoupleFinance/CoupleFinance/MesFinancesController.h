@@ -20,14 +20,12 @@
   NSArray * cellsHist_;
   NSArray * cellsNew_;
   AddTransactionControllerProvider addTransactionProvider_;
-  NSManagedObjectContext * context_;
 }
 
 @property (nonatomic, retain) IBOutlet UITableView * tableView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil 
                bundle:(NSBundle *)nibBundleOrNil
-addTransactionProvider:(AddTransactionControllerProvider) addTransactionControllerProvider
-              context:(NSManagedObjectContext*)context;
+addTransactionProvider:(AddTransactionControllerProvider) addTransactionControllerProvider;
 
 @end

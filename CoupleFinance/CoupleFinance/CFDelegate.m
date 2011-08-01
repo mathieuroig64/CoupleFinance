@@ -31,13 +31,11 @@
 }
 
 -(id)initWithWindow:(UIWindow*)mainWindow
-     tabBarProvider:(TabBarProvider)tabBarProvider
-            context:(NSManagedObjectContext*)context{
+     tabBarProvider:(TabBarProvider)tabBarProvider{
 	self = [super init];
 	if (self) {
 		window_ = [mainWindow retain];
 		tabBarProvider_ = Block_copy(tabBarProvider);
-    context_ = [context retain];
 	}
 	return self;
 }
@@ -96,7 +94,6 @@
 {
   [window_ release];
   Block_release(tabBarProvider_);
-  [context_ release];
   [super dealloc];
 }
 

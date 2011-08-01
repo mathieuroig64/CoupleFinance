@@ -12,21 +12,11 @@
 @implementation AppScope
 @synthesize appDelegate = appDelegate_;
 @synthesize tabController = tabController_;
-@synthesize context = context_;
-
--(id)initWithContext:(NSManagedObjectContext*)context{
-	self = [super init];
-	if (self) {
-		context_ = [context retain];
-	}
-	return self;
-}
-
+@synthesize database = database_;
 
 -(void)dealloc{
 	[tabController_ release];
 	[appDelegate_ release];
-	[context_ release];
 	[super dealloc];
 }
 

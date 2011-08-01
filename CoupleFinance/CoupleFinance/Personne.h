@@ -11,18 +11,10 @@
 @interface Personne : NSObject{
   //Udid
   NSString * udid_;
-  //Manage Object
-  NSManagedObjectContext * context_;
 }
-
-- (id)initWithContext:(NSManagedObjectContext*)context;
-
-//Add personne with UDID
-- (Personne*) addPersonneWithUDID:(NSString*)udid;
-
-//Get personne with UDID
-- (Personne*) getPersonneForUDID:(NSString*)udid;
-
 @property (nonatomic, retain) NSString * udid;
-@property (nonatomic, retain) NSManagedObjectContext * context;
+
+//Find a person
+- (Personne*) getPersonForUDID:(NSString*)udid;
+
 @end

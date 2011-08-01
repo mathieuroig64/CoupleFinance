@@ -22,12 +22,10 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil 
                bundle:(NSBundle *)nibBundleOrNil
 addTransactionProvider:(AddTransactionControllerProvider) addTransactionProvider
-              context:(NSManagedObjectContext*)context
 {
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self) {
     addTransactionProvider_ = [addTransactionProvider copy];
-    context_ = [context retain];
   }
   return self;
 }
@@ -37,7 +35,6 @@ addTransactionProvider:(AddTransactionControllerProvider) addTransactionProvider
   [cellsHist_ release];
   [cellsNew_ release];
   Block_release(addTransactionProvider_);
-  [context_ release];
   [super dealloc];
 }
 

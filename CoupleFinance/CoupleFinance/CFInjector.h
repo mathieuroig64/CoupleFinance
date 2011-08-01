@@ -45,7 +45,8 @@
 
 
 #pragma mark -
-#pragma mark CoreData
-+ (NSManagedObjectContext*)injectContext;
+#pragma mark SQLite
++(NSString *) getDBPath;
++(void) copyDatabaseIfNeeded;
 
 @end

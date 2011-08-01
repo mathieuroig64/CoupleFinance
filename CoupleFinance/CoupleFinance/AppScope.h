@@ -7,18 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <sqlite3.h>
 
 @class CFDelegate;
 
 @interface AppScope : NSObject {
 	CFDelegate *appDelegate_;
 	UITabBarController *tabController_;
-	NSManagedObjectContext *context_;
+  sqlite3 * database_;
 }
 
-@property(nonatomic,retain) CFDelegate *appDelegate;
+@property (nonatomic, retain) CFDelegate *appDelegate;
 @property (nonatomic, retain) UITabBarController *tabController;
-@property (nonatomic, retain) NSManagedObjectContext *context;
+@property (nonatomic, assign) sqlite3 * database;
 
-- (id)initWithContext:(NSManagedObjectContext *)context;
 @end
