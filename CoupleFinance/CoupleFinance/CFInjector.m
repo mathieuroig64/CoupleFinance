@@ -40,7 +40,11 @@
 #pragma mark Appscope
 +(AppScope*)injectAppScope{
 	AppScope* appScope = 
+<<<<<<< HEAD
 	[[AppScope alloc] init];
+=======
+	[[[AppScope alloc] init] autorelease];
+>>>>>>> parent of e94a0bc... Personnne
 	return appScope;
 }
 
@@ -160,6 +164,7 @@
 	return [[provider copy] autorelease];
 }
 
+<<<<<<< HEAD
 #pragma mark -
 #pragma mark SQLite
 +(NSString *) getDBPath {
@@ -186,4 +191,6 @@
 }
 
 
+=======
+>>>>>>> parent of e94a0bc... Personnne
 @end

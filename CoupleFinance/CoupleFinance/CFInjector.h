@@ -43,10 +43,13 @@
 #pragma mark AddTransactionController
 +(AddTransactionControllerProvider)injectAddTransactionControllerProvider:(AppScope *)appScope;
 
+<<<<<<< HEAD
 
 #pragma mark -
 #pragma mark SQLite
 +(NSString *) getDBPath;
 +(void) copyDatabaseIfNeeded;
 
+=======
+>>>>>>> parent of e94a0bc... Personnne
 @end

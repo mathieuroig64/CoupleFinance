@@ -34,7 +34,11 @@ addTransactionProvider:(AddTransactionControllerProvider) addTransactionProvider
   [tableView_ release];
   [cellsHist_ release];
   [cellsNew_ release];
+<<<<<<< HEAD
   Block_release(addTransactionProvider_);
+=======
+  [addTransactionProvider_ release];
+>>>>>>> parent of e94a0bc... Personnne
   [super dealloc];
 }
 

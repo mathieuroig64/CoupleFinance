@@ -14,11 +14,17 @@
 @interface AppScope : NSObject {
 	CFDelegate *appDelegate_;
 	UITabBarController *tabController_;
+<<<<<<< HEAD
   sqlite3 * database_;
+=======
+>>>>>>> parent of e94a0bc... Personnne
 }
 
 @property (nonatomic, retain) CFDelegate *appDelegate;
 @property (nonatomic, retain) UITabBarController *tabController;
+<<<<<<< HEAD
 @property (nonatomic, assign) sqlite3 * database;
 
+=======
+>>>>>>> parent of e94a0bc... Personnne
 @end

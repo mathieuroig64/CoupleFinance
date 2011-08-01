@@ -88,6 +88,8 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
+  // Saves changes in the application's managed object context before the application terminates.
+  [self saveContext];
 }
 
 - (void)dealloc
@@ -95,6 +97,18 @@
   [window_ release];
   Block_release(tabBarProvider_);
   [super dealloc];
+}
+
+
+
+#pragma mark - Application's Documents directory
+
+/**
+ Returns the URL to the application's Documents directory.
+ */
+- (NSURL *)applicationDocumentsDirectory
+{
+  return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
 @end

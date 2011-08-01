@@ -24,4 +24,7 @@
      tabBarProvider:(TabBarProvider)tabBarProvider;
 
 
+- (void)saveContext;
+- (NSURL *)applicationDocumentsDirectory;
+
 @end

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D105128613E27F5000D56266 /* Personne.m in Sources */ = {isa = PBXBuildFile; fileRef = D105128513E27F5000D56266 /* Personne.m */; };
 		D1250C4513DC459700FCEF36 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1250C4413DC459700FCEF36 /* UIKit.framework */; };
 		D1250C4713DC459700FCEF36 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1250C4613DC459700FCEF36 /* Foundation.framework */; };
 		D1250C4913DC459700FCEF36 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1250C4813DC459700FCEF36 /* CoreGraphics.framework */; };
@@ -59,8 +58,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D105128413E27F5000D56266 /* Personne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Personne.h; sourceTree = "<group>"; };
-		D105128513E27F5000D56266 /* Personne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Personne.m; sourceTree = "<group>"; };
 		D1250C4013DC459700FCEF36 /* CoupleFinance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoupleFinance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1250C4413DC459700FCEF36 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D1250C4613DC459700FCEF36 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -142,15 +139,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D105128213E27F3600D56266 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				D105128413E27F5000D56266 /* Personne.h */,
-				D105128513E27F5000D56266 /* Personne.m */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
 		D1250C3513DC459600FCEF36 = {
 			isa = PBXGroup;
 			children = (
@@ -245,7 +233,6 @@
 		D1250C7F13DC45B400FCEF36 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				D105128213E27F3600D56266 /* Model */,
 				D1250C7E13DC45A900FCEF36 /* main */,
 				D1250CB313DC53DF00FCEF36 /* Utilities */,
 				D1250C8E13DC490900FCEF36 /* Mes Finances */,
@@ -473,7 +460,6 @@
 				D1250CAE13DC52A500FCEF36 /* NewTransactionCell.m in Sources */,
 				D1250CB613DC53F900FCEF36 /* UIView+XIBLoading.m in Sources */,
 				D1250CBD13DC569500FCEF36 /* AddTransactionController.m in Sources */,
-				D105128613E27F5000D56266 /* Personne.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
