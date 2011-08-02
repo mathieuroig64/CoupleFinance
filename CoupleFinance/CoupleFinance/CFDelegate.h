@@ -16,15 +16,13 @@
 @private
 	UITabBarController *tabBarController_;
 	TabBarProvider tabBarProvider_;
+  NSManagedObjectContext *context_;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 
 -(id)initWithWindow:(UIWindow*)mainWindow
-     tabBarProvider:(TabBarProvider)tabBarProvider;
-
-
-- (void)saveContext;
-- (NSURL *)applicationDocumentsDirectory;
+     tabBarProvider:(TabBarProvider)tabBarProvider
+            context:(NSManagedObjectContext*)context;
 
 @end

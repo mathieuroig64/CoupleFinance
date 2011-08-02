@@ -1,19 +1,18 @@
 //
-//  Personne.m
+//  Transaction.m
 //  CoupleFinance
 //
 //  Created by Mathieu ROIG on 8/1/11.
 //  Copyright (c) 2011 Apocope. All rights reserved.
 //
 
-#import "Personne.h"
-#import "Historique.h"
+#import "Transaction.h"
 
 
-@implementation Personne
-@dynamic udid;
+@implementation Transaction
+@dynamic date;
+@dynamic valeur;
 @dynamic historique;
-@dynamic transactions;
-@dynamic partenaire;
+@dynamic personne;
 
 @end

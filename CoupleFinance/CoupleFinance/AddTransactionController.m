@@ -7,6 +7,7 @@
 //
 
 #import "AddTransactionController.h"
+#import "Database.h"
 
 @interface AddTransactionController (PrivateMethods)
 - (void) designButtons;
@@ -19,11 +20,13 @@
 @implementation AddTransactionController
 @synthesize amountTextField = amountTextField_;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithNibName:(NSString *)nibNameOrNil 
+               bundle:(NSBundle *)nibBundleOrNil
+             database:(Database*)database
 {
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self) {
-    // Custom initialization
+    database_ = [database retain];
   }
   return self;
 }
@@ -102,6 +105,7 @@
 }
 
 - (void)dealloc {
+  [database_ release];
   [amountTextField_ release];
   [super dealloc];
 }

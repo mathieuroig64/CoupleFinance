@@ -15,6 +15,7 @@
 @class MonCoupleController;
 @class HistoriqueController;
 @class AddTransactionController;
+@class Database;
 
 @interface CFInjector : NSObject
 
@@ -43,13 +44,9 @@
 #pragma mark AddTransactionController
 +(AddTransactionControllerProvider)injectAddTransactionControllerProvider:(AppScope *)appScope;
 
-<<<<<<< HEAD
 
-#pragma mark -
-#pragma mark SQLite
-+(NSString *) getDBPath;
-+(void) copyDatabaseIfNeeded;
+#pragma mark CoreData
++(NSManagedObjectContext*) injectContext;
++(Database*) injectDatabase:(AppScope *)appScope;
 
-=======
->>>>>>> parent of e94a0bc... Personnne
 @end

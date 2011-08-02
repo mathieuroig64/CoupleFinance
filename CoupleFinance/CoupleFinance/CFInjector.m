@@ -13,6 +13,7 @@
 #import "MonCoupleController.h"
 #import "HistoriqueController.h"
 #import "AddTransactionController.h"
+#import "Database.h"
 
 @implementation CFInjector
 
@@ -20,9 +21,6 @@
 +(CFInjector*)injectDelegate{	
 	AppScope* appScope = [CFInjector injectAppScope];
 	
-  //Init BDD
-  [CFInjector copyDatabaseIfNeeded];
-  
 	UIWindow* window = [[[UIWindow alloc] 
                        initWithFrame:CGRectMake(0, 0, 320, 480)] autorelease];
 	
@@ -30,21 +28,25 @@
   
 	CFDelegate* appDelegate = 
 	[[CFDelegate alloc] initWithWindow:window 
-											tabBarProvider:tabBarProvider];
-  
+											tabBarProvider:tabBarProvider
+                             context:appScope.context];
+    
   [appScope setAppDelegate:appDelegate];
-	
+  
+  Database * db = [CFInjector injectDatabase:appScope];
+  
+	[appScope setDatabase:db];
 	return [appDelegate autorelease];
 }
 
 #pragma mark Appscope
 +(AppScope*)injectAppScope{
+  NSManagedObjectContext * context = [CFInjector injectContext];
+  
 	AppScope* appScope = 
-<<<<<<< HEAD
-	[[AppScope alloc] init];
-=======
-	[[[AppScope alloc] init] autorelease];
->>>>>>> parent of e94a0bc... Personnne
+	[[[AppScope alloc] initWithContext:context] autorelease];
+  
+  
 	return appScope;
 }
 
@@ -132,7 +134,8 @@
   MesFinancesController * controller = [[[MesFinancesController alloc] 
                                          initWithNibName:@"MesFinancesController" 
                                          bundle:nil
-                                         addTransactionProvider:addProvider] autorelease];
+                                         addTransactionProvider:addProvider
+                                         database:appScope.database] autorelease];
   return controller;
 }
 
@@ -164,33 +167,36 @@
 	return [[provider copy] autorelease];
 }
 
-<<<<<<< HEAD
-#pragma mark -
-#pragma mark SQLite
-+(NSString *) getDBPath {
-	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory , NSUserDomainMask, YES);
-	NSString *documentsDir = [paths objectAtIndex:0];
-	return [documentsDir stringByAppendingPathComponent:@"CoupleFinance.db"];
-}
-
-+(void) copyDatabaseIfNeeded{
-	//Using NSFileManager we can perform many file system operations.
-	NSFileManager *fileManager = [NSFileManager defaultManager];
+#pragma mark CoreData
++(NSManagedObjectContext*)injectContext{
+  NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, 
+																											 NSUserDomainMask, YES);
+	NSString *basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
+	NSString *strFilePath = 
+	[basePath stringByAppendingPathComponent:@"/CoupleFinance.db"];
+	NSLog(@"%@",strFilePath);
+	NSManagedObjectModel * managedObjectModel = 
+	[NSManagedObjectModel mergedModelFromBundles:nil] ; 
 	NSError *error;
-	NSString *dbPath = [self getDBPath];
-	BOOL success = [fileManager fileExistsAtPath:dbPath]; 
-	
-	if(!success) {
-		
-		NSString *defaultDBPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"CoupleFinance.db"];
-		success = [fileManager copyItemAtPath:defaultDBPath toPath:dbPath error:&error];
-		
-		if (!success) 
-			NSAssert1(0, @"Failed to create writable database file with message '%@'.", [error localizedDescription]);
-	}	
+	NSPersistentStoreCoordinator * persistentStoreCoordinator = 
+	[[[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:managedObjectModel] 
+	 autorelease];
+	if (![persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType
+                                                configuration:nil 
+                                                          URL:[NSURL fileURLWithPath:strFilePath]
+                                                      options:nil 
+                                                        error:&error]) {
+		NSLog(@"Unable to addPersistentStoreWithType : %@", error.description);
+		exit(-1);
+	} 
+	NSManagedObjectContext *managedObjectContext = 
+	[[[NSManagedObjectContext alloc] init] autorelease];
+	[managedObjectContext setPersistentStoreCoordinator: persistentStoreCoordinator];
+	return managedObjectContext;
+}
+                        
++(Database*) injectDatabase:(AppScope *)appScope{
+  return [[[Database alloc] initWithContext:appScope.context] autorelease];
 }
 
-
-=======
->>>>>>> parent of e94a0bc... Personnne
 @end

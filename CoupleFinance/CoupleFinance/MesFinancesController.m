@@ -10,6 +10,8 @@
 #import "NewTransactionCell.h"
 #import "UIView+XIBLoading.h"
 #import "AddTransactionController.h"
+#import "Database.h"
+#import "Personne.h"
 
 @interface MesFinancesController (PrivateMethods)
 - (void) configureCells;
@@ -22,10 +24,12 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil 
                bundle:(NSBundle *)nibBundleOrNil
 addTransactionProvider:(AddTransactionControllerProvider) addTransactionProvider
+             database:(Database*)database
 {
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self) {
-    addTransactionProvider_ = [addTransactionProvider copy];
+    addTransactionProvider_ = Block_copy(addTransactionProvider);
+    database_ = [database retain];
   }
   return self;
 }
@@ -34,11 +38,8 @@ addTransactionProvider:(AddTransactionControllerProvider) addTransactionProvider
   [tableView_ release];
   [cellsHist_ release];
   [cellsNew_ release];
-<<<<<<< HEAD
-  Block_release(addTransactionProvider_);
-=======
   [addTransactionProvider_ release];
->>>>>>> parent of e94a0bc... Personnne
+  [database_ release];
   [super dealloc];
 }
 
@@ -59,6 +60,8 @@ addTransactionProvider:(AddTransactionControllerProvider) addTransactionProvider
   
   //Configure cells
   [self configureCells];
+  
+  NSString * udid = [[UIDevice currentDevice] uniqueIdentifier];
 }
 
 #pragma mark Datas

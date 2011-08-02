@@ -31,11 +31,13 @@
 }
 
 -(id)initWithWindow:(UIWindow*)mainWindow
-     tabBarProvider:(TabBarProvider)tabBarProvider{
+     tabBarProvider:(TabBarProvider)tabBarProvider
+            context:(NSManagedObjectContext*)context{
 	self = [super init];
 	if (self) {
 		window_ = [mainWindow retain];
 		tabBarProvider_ = Block_copy(tabBarProvider);
+    context_ = [context retain];
 	}
 	return self;
 }
@@ -86,29 +88,14 @@
    */
 }
 
-- (void)applicationWillTerminate:(UIApplication *)application
-{
-  // Saves changes in the application's managed object context before the application terminates.
-  [self saveContext];
+- (void)applicationWillTerminate:(UIApplication *)application{
 }
 
 - (void)dealloc
 {
   [window_ release];
   Block_release(tabBarProvider_);
+  [context_ release];
   [super dealloc];
 }
-
-
-
-#pragma mark - Application's Documents directory
-
-/**
- Returns the URL to the application's Documents directory.
- */
-- (NSURL *)applicationDocumentsDirectory
-{
-  return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
-}
-
 @end

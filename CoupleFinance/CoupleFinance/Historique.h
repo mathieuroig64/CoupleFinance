@@ -1,5 +1,5 @@
 //
-//  Personne.h
+//  Historique.h
 //  CoupleFinance
 //
 //  Created by Mathieu ROIG on 8/1/11.
@@ -9,20 +9,17 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class Historique;
 
-@interface Personne : NSManagedObject {
+@interface Historique : NSManagedObject {
 @private
 }
-@property (nonatomic, retain) NSString * udid;
-@property (nonatomic, retain) Historique *historique;
+@property (nonatomic, retain) NSDate * debutPeriode;
+@property (nonatomic, retain) NSDate * finPeriode;
+@property (nonatomic, retain) NSManagedObject *personne;
 @property (nonatomic, retain) NSSet *transactions;
-@property (nonatomic, retain) NSManagedObject *partenaire;
-
-
 @end
 
-@interface Personne (CoreDataGeneratedAccessors)
+@interface Historique (CoreDataGeneratedAccessors)
 
 - (void)addTransactionsObject:(NSManagedObject *)value;
 - (void)removeTransactionsObject:(NSManagedObject *)value;
