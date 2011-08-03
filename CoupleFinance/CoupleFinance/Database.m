@@ -15,7 +15,7 @@
 - (id)initWithContext:(NSManagedObjectContext*)moc{
   self = [super init];
   if (self) {
-    // Initialization code here.
+    context_ = [moc retain];
   }
   
   return self;

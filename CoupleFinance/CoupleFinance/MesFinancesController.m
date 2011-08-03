@@ -62,6 +62,10 @@ addTransactionProvider:(AddTransactionControllerProvider) addTransactionProvider
   [self configureCells];
   
   NSString * udid = [[UIDevice currentDevice] uniqueIdentifier];
+  Personne * newPersonne = [Personne new];
+  newPersonne = [newPersonne getPersonneForUDID:udid context:database_.context];
+  NSLog(@"Personne : %@", newPersonne.udid);
+  [newPersonne release];
 }
 
 #pragma mark Datas

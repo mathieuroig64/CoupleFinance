@@ -19,6 +19,12 @@
 @property (nonatomic, retain) NSSet *transactions;
 @property (nonatomic, retain) NSManagedObject *partenaire;
 
+// Add new personn to CD
+- (Personne*) addNewPersonneWithUDID:(NSString*)udid
+                             context:(NSManagedObjectContext*)context;
+
+- (Personne*) getPersonneForUDID:(NSString*)udid
+                         context:(NSManagedObjectContext*)context;
 
 @end
 
