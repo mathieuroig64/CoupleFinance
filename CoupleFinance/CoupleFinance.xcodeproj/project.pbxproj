@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D1226B4813E7379800A082F2 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = D1226B4713E7379800A082F2 /* Database.m */; };
-		D1226B4B13E7433400A082F2 /* Historique.m in Sources */ = {isa = PBXBuildFile; fileRef = D1226B4A13E7433400A082F2 /* Historique.m */; };
-		D1226B4E13E7435300A082F2 /* Personne.m in Sources */ = {isa = PBXBuildFile; fileRef = D1226B4D13E7435300A082F2 /* Personne.m */; };
-		D1226B5113E7435F00A082F2 /* Partenaire.m in Sources */ = {isa = PBXBuildFile; fileRef = D1226B5013E7435E00A082F2 /* Partenaire.m */; };
 		D1250C4513DC459700FCEF36 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1250C4413DC459700FCEF36 /* UIKit.framework */; };
 		D1250C4713DC459700FCEF36 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1250C4613DC459700FCEF36 /* Foundation.framework */; };
 		D1250C4913DC459700FCEF36 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1250C4813DC459700FCEF36 /* CoreGraphics.framework */; };
@@ -48,7 +44,10 @@
 		D1250CBE13DC569500FCEF36 /* AddTransactionController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1250CBC13DC569500FCEF36 /* AddTransactionController.xib */; };
 		D1250CC513DC5EEB00FCEF36 /* DoneDown.png in Resources */ = {isa = PBXBuildFile; fileRef = D1250CC313DC5EEB00FCEF36 /* DoneDown.png */; };
 		D1250CC613DC5EEB00FCEF36 /* DoneUp.png in Resources */ = {isa = PBXBuildFile; fileRef = D1250CC413DC5EEB00FCEF36 /* DoneUp.png */; };
-		D1EC8ACF13E743A6003958E7 /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = D1EC8ACE13E743A6003958E7 /* Transaction.m */; };
+		D13EA85B13EEFB2C00DFCCB9 /* PersonneManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D13EA85A13EEFB2C00DFCCB9 /* PersonneManager.m */; };
+		D13EA87013EEFD8700DFCCB9 /* PersonneCD.m in Sources */ = {isa = PBXBuildFile; fileRef = D13EA86F13EEFD8700DFCCB9 /* PersonneCD.m */; };
+		D13EA87313EEFD8700DFCCB9 /* TransactionCD.m in Sources */ = {isa = PBXBuildFile; fileRef = D13EA87213EEFD8700DFCCB9 /* TransactionCD.m */; };
+		D13EA87613EEFD8800DFCCB9 /* HistoriqueCD.m in Sources */ = {isa = PBXBuildFile; fileRef = D13EA87513EEFD8800DFCCB9 /* HistoriqueCD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,14 +61,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D1226B4613E7379800A082F2 /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
-		D1226B4713E7379800A082F2 /* Database.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Database.m; sourceTree = "<group>"; };
-		D1226B4913E7433400A082F2 /* Historique.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Historique.h; sourceTree = "<group>"; };
-		D1226B4A13E7433400A082F2 /* Historique.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Historique.m; sourceTree = "<group>"; };
-		D1226B4C13E7435300A082F2 /* Personne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Personne.h; sourceTree = "<group>"; };
-		D1226B4D13E7435300A082F2 /* Personne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Personne.m; sourceTree = "<group>"; };
-		D1226B4F13E7435E00A082F2 /* Partenaire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Partenaire.h; path = CoupleFinance.xcodeproj/Partenaire.h; sourceTree = SOURCE_ROOT; };
-		D1226B5013E7435E00A082F2 /* Partenaire.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Partenaire.m; path = CoupleFinance.xcodeproj/Partenaire.m; sourceTree = SOURCE_ROOT; };
 		D1250C4013DC459700FCEF36 /* CoupleFinance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoupleFinance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1250C4413DC459700FCEF36 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D1250C4613DC459700FCEF36 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -118,9 +109,15 @@
 		D1250CBC13DC569500FCEF36 /* AddTransactionController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddTransactionController.xib; sourceTree = "<group>"; };
 		D1250CC313DC5EEB00FCEF36 /* DoneDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DoneDown.png; path = images/DoneDown.png; sourceTree = "<group>"; };
 		D1250CC413DC5EEB00FCEF36 /* DoneUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DoneUp.png; path = images/DoneUp.png; sourceTree = "<group>"; };
+		D13EA85913EEFB2C00DFCCB9 /* PersonneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonneManager.h; sourceTree = "<group>"; };
+		D13EA85A13EEFB2C00DFCCB9 /* PersonneManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonneManager.m; sourceTree = "<group>"; };
+		D13EA86E13EEFD8700DFCCB9 /* PersonneCD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonneCD.h; sourceTree = "<group>"; };
+		D13EA86F13EEFD8700DFCCB9 /* PersonneCD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonneCD.m; sourceTree = "<group>"; };
+		D13EA87113EEFD8700DFCCB9 /* TransactionCD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionCD.h; sourceTree = "<group>"; };
+		D13EA87213EEFD8700DFCCB9 /* TransactionCD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionCD.m; sourceTree = "<group>"; };
+		D13EA87413EEFD8700DFCCB9 /* HistoriqueCD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoriqueCD.h; sourceTree = "<group>"; };
+		D13EA87513EEFD8800DFCCB9 /* HistoriqueCD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoriqueCD.m; sourceTree = "<group>"; };
 		D1E87F6F13E12F79002AAE71 /* TypeDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeDef.h; sourceTree = "<group>"; };
-		D1EC8ACD13E743A6003958E7 /* Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transaction.h; sourceTree = "<group>"; };
-		D1EC8ACE13E743A6003958E7 /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,16 +151,12 @@
 		D1226B4213E7361500A082F2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D1EC8ACD13E743A6003958E7 /* Transaction.h */,
-				D1EC8ACE13E743A6003958E7 /* Transaction.m */,
-				D1226B4C13E7435300A082F2 /* Personne.h */,
-				D1226B4D13E7435300A082F2 /* Personne.m */,
-				D1226B4F13E7435E00A082F2 /* Partenaire.h */,
-				D1226B5013E7435E00A082F2 /* Partenaire.m */,
-				D1226B4913E7433400A082F2 /* Historique.h */,
-				D1226B4A13E7433400A082F2 /* Historique.m */,
-				D1226B4613E7379800A082F2 /* Database.h */,
-				D1226B4713E7379800A082F2 /* Database.m */,
+				D13EA86E13EEFD8700DFCCB9 /* PersonneCD.h */,
+				D13EA86F13EEFD8700DFCCB9 /* PersonneCD.m */,
+				D13EA87413EEFD8700DFCCB9 /* HistoriqueCD.h */,
+				D13EA87513EEFD8800DFCCB9 /* HistoriqueCD.m */,
+				D13EA87113EEFD8700DFCCB9 /* TransactionCD.h */,
+				D13EA87213EEFD8700DFCCB9 /* TransactionCD.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -260,6 +253,7 @@
 		D1250C7F13DC45B400FCEF36 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D13EA85713EEFAF200DFCCB9 /* Manager */,
 				D1226B4213E7361500A082F2 /* Model */,
 				D1250CB313DC53DF00FCEF36 /* Utilities */,
 				D1250C7E13DC45A900FCEF36 /* main */,
@@ -350,6 +344,15 @@
 				D1250CBC13DC569500FCEF36 /* AddTransactionController.xib */,
 			);
 			name = "Add Transaction";
+			sourceTree = "<group>";
+		};
+		D13EA85713EEFAF200DFCCB9 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				D13EA85913EEFB2C00DFCCB9 /* PersonneManager.h */,
+				D13EA85A13EEFB2C00DFCCB9 /* PersonneManager.m */,
+			);
+			name = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -481,11 +484,10 @@
 				D1250CAE13DC52A500FCEF36 /* NewTransactionCell.m in Sources */,
 				D1250CB613DC53F900FCEF36 /* UIView+XIBLoading.m in Sources */,
 				D1250CBD13DC569500FCEF36 /* AddTransactionController.m in Sources */,
-				D1226B4813E7379800A082F2 /* Database.m in Sources */,
-				D1226B4B13E7433400A082F2 /* Historique.m in Sources */,
-				D1226B4E13E7435300A082F2 /* Personne.m in Sources */,
-				D1226B5113E7435F00A082F2 /* Partenaire.m in Sources */,
-				D1EC8ACF13E743A6003958E7 /* Transaction.m in Sources */,
+				D13EA85B13EEFB2C00DFCCB9 /* PersonneManager.m in Sources */,
+				D13EA87013EEFD8700DFCCB9 /* PersonneCD.m in Sources */,
+				D13EA87313EEFD8700DFCCB9 /* TransactionCD.m in Sources */,
+				D13EA87613EEFD8800DFCCB9 /* HistoriqueCD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

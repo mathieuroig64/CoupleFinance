@@ -9,19 +9,19 @@
 #import <Foundation/Foundation.h>
 
 @class CFDelegate;
-@class Database;
+@class PersonneManager;
 
 @interface AppScope : NSObject {
 	CFDelegate *appDelegate_;
 	UITabBarController *tabController_;
   NSManagedObjectContext *context_;
-  Database * database_;
+  PersonneManager * personneManager_;
 }
 
 @property (nonatomic, retain) CFDelegate *appDelegate;
 @property (nonatomic, retain) UITabBarController *tabController;
 @property (nonatomic, retain) NSManagedObjectContext *context;
-@property (nonatomic, retain) Database * database;
+@property (nonatomic, retain) PersonneManager * personneManager;
 
 - (id) initWithContext:(NSManagedObjectContext*)context;
 

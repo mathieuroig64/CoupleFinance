@@ -22,13 +22,13 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          isPathRelative = "1"
-         filePath = "CoupleFinance/MesFinancesController.m"
-         timestampString = "334043325.786539"
+         filePath = "CoupleFinance/PersonneManager.m"
+         timestampString = "334430816.198925"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "67"
-         endingLineNumber = "67"
-         landmarkName = "-viewDidLoad"
+         startingLineNumber = "39"
+         endingLineNumber = "39"
+         landmarkName = "-addNewPersonWithFirstName:lastName:udid:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

@@ -1,32 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="562" systemVersion="11A511" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Historique">
+    <entity name="HistoriqueCD" representedClassName="HistoriqueCD">
         <attribute name="debutPeriode" optional="YES" attributeType="Date"/>
         <attribute name="finPeriode" optional="YES" attributeType="Date"/>
-        <relationship name="personne" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Personne" inverseName="historique" inverseEntity="Personne"/>
-        <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Transaction" inverseName="historique" inverseEntity="Transaction"/>
+        <relationship name="personne" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="PersonneCD" inverseName="historique" inverseEntity="PersonneCD"/>
+        <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TransactionCD" inverseName="historique" inverseEntity="TransactionCD"/>
     </entity>
-    <entity name="Partenaire">
+    <entity name="PersonneCD" representedClassName="PersonneCD">
         <attribute name="nom" optional="YES" attributeType="String"/>
         <attribute name="prenom" optional="YES" attributeType="String"/>
-        <relationship name="personne" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Personne" inverseName="partenaire" inverseEntity="Personne"/>
-    </entity>
-    <entity name="Personne">
         <attribute name="udid" optional="YES" attributeType="String"/>
-        <relationship name="historique" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Historique" inverseName="personne" inverseEntity="Historique"/>
-        <relationship name="partenaire" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Partenaire" inverseName="personne" inverseEntity="Partenaire"/>
-        <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Transaction" inverseName="personne" inverseEntity="Transaction"/>
+        <relationship name="historique" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="HistoriqueCD" inverseName="personne" inverseEntity="HistoriqueCD"/>
+        <relationship name="partenaire" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="PersonneCD" inverseName="partenaire" inverseEntity="PersonneCD"/>
+        <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TransactionCD" inverseName="personne" inverseEntity="TransactionCD"/>
     </entity>
-    <entity name="Transaction" representedClassName="Transaction">
+    <entity name="TransactionCD" representedClassName="TransactionCD">
         <attribute name="date" optional="YES" attributeType="Date"/>
         <attribute name="valeur" optional="YES" attributeType="Float" defaultValueString="0.0"/>
-        <relationship name="historique" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Historique" inverseName="transactions" inverseEntity="Historique"/>
-        <relationship name="personne" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Personne" inverseName="transactions" inverseEntity="Personne"/>
+        <relationship name="historique" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="HistoriqueCD" inverseName="transactions" inverseEntity="HistoriqueCD"/>
+        <relationship name="personne" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="PersonneCD" inverseName="transactions" inverseEntity="PersonneCD"/>
     </entity>
     <elements>
-        <element name="Historique" positionX="-15203" positionY="-2853" width="128" height="105"/>
-        <element name="Partenaire" positionX="-15516" positionY="-2658" width="128" height="75"/>
-        <element name="Personne" positionX="-15498" positionY="-2799" width="128" height="90"/>
-        <element name="Transaction" positionX="-15201" positionY="-2673" width="128" height="105"/>
+        <element name="HistoriqueCD" positionX="-15203" positionY="-2853" width="128" height="105"/>
+        <element name="PersonneCD" positionX="-15579" positionY="-2799" width="128" height="135"/>
+        <element name="TransactionCD" positionX="-15201" positionY="-2673" width="128" height="105"/>
     </elements>
 </model>

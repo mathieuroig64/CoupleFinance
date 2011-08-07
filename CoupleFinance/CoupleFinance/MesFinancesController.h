@@ -10,19 +10,18 @@
 #import "CFInjector.h"
 
 @class AddTransactionController;
-@class Database;
-@class Personne;
+@class PersonneManager;
 
 @interface MesFinancesController : UIViewController
 <UITableViewDataSource, UITabBarDelegate>{
-  @public
+@public
   UITableView * tableView_;
   
-  @private
+@private
   NSArray * cellsHist_;
   NSArray * cellsNew_;
   AddTransactionControllerProvider addTransactionProvider_;
-  Database * database_;
+  PersonneManager * personneManager_;
 }
 
 @property (nonatomic, retain) IBOutlet UITableView * tableView;
@@ -30,6 +29,6 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil 
                bundle:(NSBundle *)nibBundleOrNil
 addTransactionProvider:(AddTransactionControllerProvider) addTransactionControllerProvider
-             database:(Database*)database;
+      personneManager:(PersonneManager*)personneManager;
 
 @end

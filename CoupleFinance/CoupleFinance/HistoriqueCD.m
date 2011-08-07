@@ -1,15 +1,17 @@
 //
-//  Historique.m
+//  HistoriqueCD.m
 //  CoupleFinance
 //
-//  Created by Mathieu ROIG on 8/1/11.
+//  Created by Mathieu ROIG on 8/7/11.
 //  Copyright (c) 2011 Apocope. All rights reserved.
 //
 
-#import "Historique.h"
+#import "HistoriqueCD.h"
+#import "PersonneCD.h"
+#import "TransactionCD.h"
 
 
-@implementation Historique
+@implementation HistoriqueCD
 @dynamic debutPeriode;
 @dynamic finPeriode;
 @dynamic personne;

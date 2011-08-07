@@ -10,8 +10,8 @@
 #import "NewTransactionCell.h"
 #import "UIView+XIBLoading.h"
 #import "AddTransactionController.h"
-#import "Database.h"
-#import "Personne.h"
+#import "PersonneManager.h"
+#import "PersonneCD.h"
 
 @interface MesFinancesController (PrivateMethods)
 - (void) configureCells;
@@ -24,12 +24,12 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil 
                bundle:(NSBundle *)nibBundleOrNil
 addTransactionProvider:(AddTransactionControllerProvider) addTransactionProvider
-             database:(Database*)database
+      personneManager:(PersonneManager*)personneManager
 {
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self) {
     addTransactionProvider_ = Block_copy(addTransactionProvider);
-    database_ = [database retain];
+    personneManager_ = [personneManager retain];
   }
   return self;
 }
@@ -39,7 +39,7 @@ addTransactionProvider:(AddTransactionControllerProvider) addTransactionProvider
   [cellsHist_ release];
   [cellsNew_ release];
   [addTransactionProvider_ release];
-  [database_ release];
+  [personneManager_ release];
   [super dealloc];
 }
 
@@ -62,10 +62,9 @@ addTransactionProvider:(AddTransactionControllerProvider) addTransactionProvider
   [self configureCells];
   
   NSString * udid = [[UIDevice currentDevice] uniqueIdentifier];
-  Personne * newPersonne = [Personne new];
-  newPersonne = [newPersonne getPersonneForUDID:udid context:database_.context];
-  NSLog(@"Personne : %@", newPersonne.udid);
-  [newPersonne release];
+  [personneManager_ addNewPersonWithFirstName:nil
+                                     lastName:nil
+                                         udid:udid];
 }
 
 #pragma mark Datas

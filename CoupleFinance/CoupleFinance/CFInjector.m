@@ -13,7 +13,7 @@
 #import "MonCoupleController.h"
 #import "HistoriqueController.h"
 #import "AddTransactionController.h"
-#import "Database.h"
+#import "PersonneManager.h"
 
 @implementation CFInjector
 
@@ -30,12 +30,12 @@
 	[[CFDelegate alloc] initWithWindow:window 
 											tabBarProvider:tabBarProvider
                              context:appScope.context];
-    
+  
   [appScope setAppDelegate:appDelegate];
   
-  Database * db = [CFInjector injectDatabase:appScope];
+  PersonneManager * personneManager = [CFInjector injectPersonneManager:appScope];
   
-	[appScope setDatabase:db];
+	[appScope setPersonneManager:personneManager];
 	return [appDelegate autorelease];
 }
 
@@ -135,7 +135,7 @@
                                          initWithNibName:@"MesFinancesController" 
                                          bundle:nil
                                          addTransactionProvider:addProvider
-                                         database:appScope.database] autorelease];
+                                         personneManager:appScope.personneManager] autorelease];
   return controller;
 }
 
@@ -167,6 +167,12 @@
 	return [[provider copy] autorelease];
 }
 
+#pragma mark PersonneManager
++(PersonneManager*) injectPersonneManager:(AppScope *)appScope{
+  return [[[PersonneManager alloc] initWithContext:appScope.context] autorelease];
+}
+
+
 #pragma mark CoreData
 +(NSManagedObjectContext*)injectContext{
   NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, 
@@ -193,10 +199,6 @@
 	[[[NSManagedObjectContext alloc] init] autorelease];
 	[managedObjectContext setPersistentStoreCoordinator: persistentStoreCoordinator];
 	return managedObjectContext;
-}
-                        
-+(Database*) injectDatabase:(AppScope *)appScope{
-  return [[[Database alloc] initWithContext:appScope.context] autorelease];
 }
 
 @end

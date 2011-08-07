@@ -15,7 +15,7 @@
 @class MonCoupleController;
 @class HistoriqueController;
 @class AddTransactionController;
-@class Database;
+@class PersonneManager;
 
 @interface CFInjector : NSObject
 
@@ -44,9 +44,10 @@
 #pragma mark AddTransactionController
 +(AddTransactionControllerProvider)injectAddTransactionControllerProvider:(AppScope *)appScope;
 
+#pragma mark PersonneManager
++(PersonneManager*) injectPersonneManager:(AppScope *)appScope;
 
 #pragma mark CoreData
 +(NSManagedObjectContext*) injectContext;
-+(Database*) injectDatabase:(AppScope *)appScope;
 
 @end

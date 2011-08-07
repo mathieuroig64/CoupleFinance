@@ -13,7 +13,7 @@
 @synthesize appDelegate = appDelegate_;
 @synthesize tabController = tabController_;
 @synthesize context = context_;
-@synthesize database = database_;
+@synthesize personneManager = personneManager_;
 
 - (id) initWithContext:(NSManagedObjectContext*)context{
   self = [super init];
@@ -24,7 +24,7 @@
 }
 
 -(void)dealloc{
-  [database_ release];
+  [personneManager_ release];
 	[tabController_ release];
 	[appDelegate_ release];
   [context_ release];
